@@ -1,0 +1,730 @@
+{
+  "baseline_evasion": 0.08242612752721618,
+  "results_by_epsilon": {
+    "0.5": {
+      "evasion_rate": 0.81,
+      "cosine_with_probe": -0.8049739003181458,
+      "adv_scores_mean": 0.15289835631847382
+    },
+    "1.0": {
+      "evasion_rate": 1.0,
+      "cosine_with_probe": -0.8051653504371643,
+      "adv_scores_mean": 0.00011987308243988082
+    },
+    "2.0": {
+      "evasion_rate": 1.0,
+      "cosine_with_probe": -0.8054362535476685,
+      "adv_scores_mean": 7.371376946341268e-12
+    },
+    "5.0": {
+      "evasion_rate": 1.0,
+      "cosine_with_probe": -0.8055089712142944,
+      "adv_scores_mean": 3.707529384581077e-16
+    },
+    "10.0": {
+      "evasion_rate": 1.0,
+      "cosine_with_probe": -0.8055089712142944,
+      "adv_scores_mean": 3.707529384581077e-16
+    }
+  },
+  "finding": "Random ProteinMPNN evasion: 8.2%. pSSR oracle evasion at \u03b5=5: 100.0%. cosine(attack, probe) = -0.805.",
+  "taxonomy": {
+    "6122": {
+      "feature": 6122,
+      "top_sequences": [
+        "sp|P0C8C1|STX3B_SCOAN",
+        "sp|P0C8J3|SL1C2_VIPAA",
+        "sp|P0C8C9|STX8A_SCOAN",
+        "sp|P84690|SC58_TITOB",
+        "sp|P0C8J2|SL1C1_VIPAA",
+        "sp|P0C911|SCX_ANDMA",
+        "sp|P0C8C0|STX3A_SCOAN",
+        "sp|P84680|SC35_TITOB",
+        "sp|P83324|RIP_FLAVE",
+        "sp|Q9PS28|VSPF_CERCE",
+        "sp|P0C8C5|STX5_SCOAN",
+        "sp|P0C8B6|STX1_SCOAN",
+        "sp|P18999|PA2_DABSI",
+        "sp|P0DKM3|TU61_IOTOL",
+        "sp|B3EWG8|PA2A_PORNA",
+        "sp|P84026|THBI_BOTJA",
+        "sp|P0C8B8|STX2_SCOAN",
+        "sp|P0C8C6|STX5_SCOVN",
+        "sp|Q9TWL8|COMB_CONMA",
+        "sp|P0DX57|TX2_BUTLE"
+      ],
+      "top_enriched_aa": [
+        "H",
+        "F",
+        "P",
+        "Q",
+        "D"
+      ],
+      "enrichment": {
+        "H": 1.5976810193103792,
+        "F": 1.547712699869511,
+        "P": 1.2984715390941328,
+        "Q": 1.1718146185814737,
+        "D": 1.122645046042369
+      },
+      "mean_activation": 1.2838976383209229,
+      "activation_rate": 0.41296728971962615
+    },
+    "4097": {
+      "feature": 4097,
+      "top_sequences": [
+        "sp|P83324|RIP_FLAVE",
+        "sp|B3EWX4|TXS6D_CUPSA",
+        "sp|P84804|CRVPN_NAJHH",
+        "sp|P0CG44|UC1_URTCR",
+        "sp|P86601|MALNB_MALOL",
+        "sp|B3EWH2|AON_AZEFE",
+        "sp|P0C8C1|STX3B_SCOAN",
+        "sp|P18999|PA2_DABSI",
+        "sp|P0DMG6|CRVP_BOTFO",
+        "sp|P0C8C0|STX3A_SCOAN",
+        "sp|P84676|SC27_TITOB",
+        "sp|P0DM46|VM3A_MICCO",
+        "sp|P0DJ96|TX22_DENAN",
+        "sp|P84026|THBI_BOTJA",
+        "sp|P0C8C7|STX6_SCOAN",
+        "sp|P0C8B6|STX1_SCOAN",
+        "sp|P0DJB3|CUX1_CONCL",
+        "sp|P84690|SC58_TITOB",
+        "sp|P0C8C9|STX8A_SCOAN",
+        "sp|P0DQU9|DIRK1_BUTOC"
+      ],
+      "top_enriched_aa": [
+        "P",
+        "K",
+        "E",
+        "Q",
+        "D"
+      ],
+      "enrichment": {
+        "P": 2.5937760744343774,
+        "K": 1.5337322754040823,
+        "E": 1.2782576187284072,
+        "Q": 1.2504119405594993,
+        "D": 1.2245653957508227
+      },
+      "mean_activation": 0.5092350244522095,
+      "activation_rate": 0.3732476635514019
+    },
+    "5312": {
+      "feature": 5312,
+      "top_sequences": [
+        "sp|P01533|NA11_ANESU",
+        "sp|P59084|BDS2_ANESU",
+        "sp|P0C1W7|CDKC_CONVX",
+        "sp|P58783|CA4B_CONER",
+        "sp|P0DMZ2|STX_DOFAR",
+        "sp|I1SB07|GM3C_CONCN",
+        "sp|P58926|CM4A_CONPE",
+        "sp|A0A0B4J184|T3A_TERVA",
+        "sp|P84902|CASSI_CORCC",
+        "sp|P69944|AETX2_ANEER",
+        "sp|C0HL54|BDSB4_RADCR",
+        "sp|P01535|STX3_ANESU",
+        "sp|P86464|BDS21_BUNCN",
+        "sp|P0DRL2|O164B_CONCL",
+        "sp|C0HKY6|CM3B_CONAO",
+        "sp|P0CY74|CM17_CONBU",
+        "sp|P83244|KA132_ORTSC",
+        "sp|P58845|U6TC_CONTE",
+        "sp|P30785|NA25_RADCR",
+        "sp|P0C8X6|KAXUB_TITST"
+      ],
+      "top_enriched_aa": [
+        "C",
+        "W",
+        "G",
+        "Y",
+        "P"
+      ],
+      "enrichment": {
+        "C": 4.712746672845324,
+        "W": 2.46169314796425,
+        "G": 2.0672546746397438,
+        "Y": 1.7229698323459317,
+        "P": 1.5091669209094072
+      },
+      "mean_activation": 0.5637029409408569,
+      "activation_rate": 0.3475467289719626
+    },
+    "1055": {
+      "feature": 1055,
+      "top_sequences": [
+        "sp|P0DOZ5|CKC_CONCB",
+        "sp|P86601|MALNB_MALOL",
+        "sp|B3EWG8|PA2A_PORNA",
+        "sp|P0C8C0|STX3A_SCOAN",
+        "sp|P0C8E2|CKP3_CONPI",
+        "sp|P0C8C9|STX8A_SCOAN",
+        "sp|B3EWW8|TXC6D_CUPSA",
+        "sp|P86295|PORFL_POTOR",
+        "sp|B3A0N1|VPA_BOTAT",
+        "sp|P84388|PLYB1_POLPI",
+        "sp|P0DKX2|VSP1_CRODM",
+        "sp|P0C8C5|STX5_SCOAN",
+        "sp|P0CJ33|TXVE1_MACLB",
+        "sp|P0C8C1|STX3B_SCOAN",
+        "sp|P0DOZ6|CKG_CONGL",
+        "sp|P86537|CRVP_DABRR",
+        "sp|P0C8B6|STX1_SCOAN",
+        "sp|P0C8D3|STX9_SCOVN",
+        "sp|P0DQQ5|CA1C_CONCT",
+        "sp|P84690|SC58_TITOB"
+      ],
+      "top_enriched_aa": [
+        "E",
+        "A",
+        "Q",
+        "P",
+        "V"
+      ],
+      "enrichment": {
+        "E": 2.3138438131507595,
+        "A": 1.22530434394121,
+        "Q": 1.176988193056447,
+        "P": 1.1557256612864335,
+        "V": 1.1115850599613804
+      },
+      "mean_activation": 0.33342245221138,
+      "activation_rate": 0.2955607476635514
+    },
+    "9026": {
+      "feature": 9026,
+      "top_sequences": [
+        "sp|A0A4Y5X1A7|CESS3_CONMO",
+        "sp|P0CH15|CM3A_CONPI",
+        "sp|P05486|CESS_CONGE",
+        "sp|P0DP10|M3A_CONFI",
+        "sp|P0C7N3|VM3CR_CROVV",
+        "sp|C0HKY8|M3D_CONAO",
+        "sp|P0DQE8|TXJ1A_THELO",
+        "sp|C0HM96|TXVE_CRODU",
+        "sp|C0HKZ3|M3I_CONAO",
+        "sp|Q9PSN7|VM3H1_CRORU",
+        "sp|P0C1N0|M3B_CONMR",
+        "sp|P0DPL3|M3J_CONTE",
+        "sp|Q6PXP0|PA2_ANUPH",
+        "sp|P0DPJ5|CM3G_CONRE",
+        "sp|C0HL54|BDSB4_RADCR",
+        "sp|B3EWS7|TXC14_CUPSA",
+        "sp|P25679|3NO29_NAJKA",
+        "sp|C0HJD3|3NB_OXYFU",
+        "sp|P58926|CM4A_CONPE",
+        "sp|C0HMC3|BSAP1_ORNSA"
+      ],
+      "top_enriched_aa": [
+        "C",
+        "H",
+        "P",
+        "E",
+        "R"
+      ],
+      "enrichment": {
+        "C": 3.278662728093448,
+        "H": 1.224283848591674,
+        "P": 1.2017070954003541,
+        "E": 1.189584812736536,
+        "R": 1.189408732094134
+      },
+      "mean_activation": 0.20852336287498474,
+      "activation_rate": 0.2867990654205608
+    },
+    "4397": {
+      "feature": 4397,
+      "top_sequences": [
+        "sp|P84715|ANF39_ORNAN",
+        "sp|K9IMD0|TRLF_DESRO",
+        "sp|P0DJC8|SLA_BOTAS",
+        "sp|Q92035|ACES_BUNFA",
+        "sp|P82885|VESP_NAJKA",
+        "sp|Q2XXL4|VESP_POGBA",
+        "sp|P38442|ZOT_VIBCH",
+        "sp|P84686|SC46_TITOB",
+        "sp|Q9UAB2|O17B_CONLI",
+        "sp|B3EWU9|TXC5A_CUPSA",
+        "sp|C0KYC4|CT55_CONSP",
+        "sp|P0DQC5|TXG2A_ETHRU",
+        "sp|P0DXW9|TXUB_MEGOP",
+        "sp|Q27Q53|TX4_LOXIN",
+        "sp|D6C4K6|U6G_CONCL",
+        "sp|O18423|TXL_EISFE",
+        "sp|P86537|CRVP_DABRR",
+        "sp|P0DJE2|VM3A_VIPAA",
+        "sp|P0DJB3|CUX1_CONCL",
+        "sp|P07374|UREA_CANEN"
+      ],
+      "top_enriched_aa": [
+        "W",
+        "H",
+        "P",
+        "A",
+        "R"
+      ],
+      "enrichment": {
+        "W": 1.3039303505677775,
+        "H": 1.2612273003815315,
+        "P": 1.2119067698211905,
+        "A": 1.1530864419033646,
+        "R": 1.1384181692731261
+      },
+      "mean_activation": 0.021900895982980728,
+      "activation_rate": 0.0035046728971962616
+    },
+    "9927": {
+      "feature": 9927,
+      "top_sequences": [
+        "sp|P86464|BDS21_BUNCN",
+        "sp|P85266|TX35D_CTEON",
+        "sp|P0DMZ2|STX_DOFAR",
+        "sp|P84713|CMO1_CONMO",
+        "sp|P60261|SCX22_TITDI",
+        "sp|P0DV07|VT2K_RADCR",
+        "sp|P58805|CRFA1_CONSP",
+        "sp|I1SB07|GM3C_CONCN",
+        "sp|P0DOZ9|CUEA_CONAX",
+        "sp|P0DKR4|PA2AB_PSEFE",
+        "sp|P0C2A0|TX20_ANDCR",
+        "sp|D6C4K4|U6E_CONCL",
+        "sp|Q7LZ24|SLLC2_VIPAP",
+        "sp|P30785|NA25_RADCR",
+        "sp|P0CH16|CM3B_CONPI",
+        "sp|Q7LZ26|XI_DEIAC",
+        "sp|P58783|CA4B_CONER",
+        "sp|P60264|SC29_CENLI",
+        "sp|P0DX59|TX4_BUTLE",
+        "sp|P56587|TERT_APIME"
+      ],
+      "top_enriched_aa": [
+        "C",
+        "G",
+        "W",
+        "Y",
+        "P"
+      ],
+      "enrichment": {
+        "C": 3.5644505754977054,
+        "G": 1.9486199117024396,
+        "W": 1.89143683733647,
+        "Y": 1.8533764285361736,
+        "P": 1.521929431868472
+      },
+      "mean_activation": 0.22036083042621613,
+      "activation_rate": 0.2505841121495327
+    },
+    "6971": {
+      "feature": 6971,
+      "top_sequences": [
+        "sp|P23029|RIP2_TRIKI",
+        "sp|P81375|OXLA_MACLB",
+        "sp|P80567|ETX1_BACCE",
+        "sp|P0DMX3|ACTP_ENTQU",
+        "sp|P81242|NHE1_BACCE",
+        "sp|P0DSL2|TX1BB_ECTTU",
+        "sp|P24475|RIP3_SURMU",
+        "sp|P0C2L0|A1X1_LOXIN",
+        "sp|P61504|SIT_SEGFL",
+        "sp|P24477|RIP2_DIACA",
+        "sp|D2KKB4|TOXPH_AMAPH",
+        "sp|P0CJ35|3L2L_OXYSC",
+        "sp|Q44066|HLYA_AERHY",
+        "sp|Q9PRM8|VSPAA_CERCE",
+        "sp|P0DJF7|VSPP_TRIPP",
+        "sp|P86348|ALPH_DEIAC",
+        "sp|P0C8I7|VM3FA_VIPAA",
+        "sp|Q7LZG3|PA2_PSEPP",
+        "sp|P84803|CRVPO_NAJKA",
+        "sp|P0DJP5|PA2A_DABSI"
+      ],
+      "top_enriched_aa": [
+        "P",
+        "V",
+        "D",
+        "K",
+        "F"
+      ],
+      "enrichment": {
+        "P": 1.1600942801833711,
+        "V": 1.15516753989313,
+        "D": 1.1472285142038807,
+        "K": 1.144519904444112,
+        "F": 1.1116418223880284
+      },
+      "mean_activation": 0.3797197937965393,
+      "activation_rate": 0.25292056074766356
+    },
+    "2704": {
+      "feature": 2704,
+      "top_sequences": [
+        "sp|O31998|YOKI_BACSU",
+        "sp|P0DJC8|SLA_BOTAS",
+        "sp|Q813X6|TOX1_BACCR",
+        "sp|P07374|UREA_CANEN",
+        "sp|P84686|SC46_TITOB",
+        "sp|Q9UAB2|O17B_CONLI",
+        "sp|B3EWU9|TXC5A_CUPSA",
+        "sp|C0KYC4|CT55_CONSP",
+        "sp|P0DQC5|TXG2A_ETHRU",
+        "sp|P0DXW9|TXUB_MEGOP",
+        "sp|Q27Q53|TX4_LOXIN",
+        "sp|D6C4K6|U6G_CONCL",
+        "sp|O18423|TXL_EISFE",
+        "sp|P0DJE2|VM3A_VIPAA",
+        "sp|P86537|CRVP_DABRR",
+        "sp|P0DTZ6|O1634_CONCL",
+        "sp|P20005|VSP1_OVOOK",
+        "sp|P84035|VM3BA_BOTAS",
+        "sp|B8XH01|LV1A_BUTIS",
+        "sp|P0C1N7|M3F_CONTE"
+      ],
+      "top_enriched_aa": [
+        "I",
+        "H",
+        "A",
+        "E",
+        "M"
+      ],
+      "enrichment": {
+        "I": 1.2448318412118724,
+        "H": 1.2445421766779974,
+        "A": 1.1367031419021543,
+        "E": 1.1319912506621368,
+        "M": 1.1277195855652986
+      },
+      "mean_activation": 0.003576121758669615,
+      "activation_rate": 0.0017523364485981308
+    },
+    "1974": {
+      "feature": 1974,
+      "top_sequences": [
+        "sp|O31998|YOKI_BACSU",
+        "sp|Q813X6|TOX1_BACCR",
+        "sp|P0DTZ6|O1634_CONCL",
+        "sp|P84686|SC46_TITOB",
+        "sp|Q9UAB2|O17B_CONLI",
+        "sp|B3EWU9|TXC5A_CUPSA",
+        "sp|C0KYC4|CT55_CONSP",
+        "sp|P0DQC5|TXG2A_ETHRU",
+        "sp|P0DXW9|TXUB_MEGOP",
+        "sp|Q27Q53|TX4_LOXIN",
+        "sp|D6C4K6|U6G_CONCL",
+        "sp|O18423|TXL_EISFE",
+        "sp|P0DJE2|VM3A_VIPAA",
+        "sp|P07374|UREA_CANEN",
+        "sp|P86537|CRVP_DABRR",
+        "sp|P20005|VSP1_OVOOK",
+        "sp|P84035|VM3BA_BOTAS",
+        "sp|B8XH01|LV1A_BUTIS",
+        "sp|P0C1N7|M3F_CONTE",
+        "sp|P0DUT1|U763_DORVU"
+      ],
+      "top_enriched_aa": [
+        "I",
+        "H",
+        "M",
+        "A",
+        "E"
+      ],
+      "enrichment": {
+        "I": 1.2662271597699175,
+        "H": 1.2386918455163656,
+        "M": 1.1506586635849878,
+        "A": 1.1456807487337022,
+        "E": 1.1250116668678933
+      },
+      "mean_activation": 0.010654476471245289,
+      "activation_rate": 0.0011682242990654205
+    },
+    "3130": {
+      "feature": 3130,
+      "top_sequences": [
+        "sp|P13494|D1A_HADVE",
+        "sp|P84062|TX1A_PHOKE",
+        "sp|P83999|TX30_PHONI",
+        "sp|P0C246|TX623_PSACA",
+        "sp|P11057|T5G1A_AGEAP",
+        "sp|P55816|TXI11_DIGCA",
+        "sp|P85267|TX29A_CTEON",
+        "sp|C0HKD0|TX3A_HETMC",
+        "sp|C0HLR8|TX1_OCUSU",
+        "sp|P60978|CALC_CALS5",
+        "sp|P81745|TOG3C_AGEAP",
+        "sp|P0DOW6|O27A_CONPG",
+        "sp|P59084|BDS2_ANESU",
+        "sp|P83557|TXMG1_MACGS",
+        "sp|P60979|TX13_KUKHI",
+        "sp|P0DMZ2|STX_DOFAR",
+        "sp|C0HKY6|CM3B_CONAO",
+        "sp|P0C8M0|TOX1_OXYLI",
+        "sp|P85271|TXF91_CTEON",
+        "sp|P05482|CM3C_CONGE"
+      ],
+      "top_enriched_aa": [
+        "C",
+        "W",
+        "H",
+        "K",
+        "D"
+      ],
+      "enrichment": {
+        "C": 4.265042661290871,
+        "W": 3.5919148635395777,
+        "H": 1.5163744646803743,
+        "K": 1.3435108063575978,
+        "D": 1.272301736473138
+      },
+      "mean_activation": 0.33114588260650635,
+      "activation_rate": 0.21495327102803738
+    },
+    "9487": {
+      "feature": 9487,
+      "top_sequences": [
+        "sp|P0C8D8|VA5C_SCOVN",
+        "sp|P0C5J8|SXPLT_PARLS",
+        "sp|P0C8J2|SL1C1_VIPAA",
+        "sp|P0DJL6|CT5A_CONCN",
+        "sp|P84692|SC64_TITOB",
+        "sp|C0HJM7|TXL1_PHOPT",
+        "sp|P0DX57|TX2_BUTLE",
+        "sp|P0C8D3|STX9_SCOVN",
+        "sp|P84026|THBI_BOTJA",
+        "sp|P45661|KAX_LEIQU",
+        "sp|Q7LZJ1|VM1_CROMN",
+        "sp|P0CI20|TE9_HASHE",
+        "sp|P0DMG8|OXLA_BOTCO",
+        "sp|P0C8I7|VM3FA_VIPAA",
+        "sp|P0C260|CMAT_CONPO",
+        "sp|P0DKN7|TU49_IOTOL",
+        "sp|P58396|KLPS_LYCER",
+        "sp|P0C8C1|STX3B_SCOAN",
+        "sp|P0C8B6|STX1_SCOAN",
+        "sp|Q9PRW2|VSP3_CROAT"
+      ],
+      "top_enriched_aa": [
+        "C",
+        "V",
+        "Q",
+        "E",
+        "L"
+      ],
+      "enrichment": {
+        "C": 1.9644681233808896,
+        "V": 1.8024090636689227,
+        "Q": 1.468045159744128,
+        "E": 1.3483187186363401,
+        "L": 1.2476250871325647
+      },
+      "mean_activation": 0.39738544821739197,
+      "activation_rate": 0.23072429906542055
+    },
+    "4028": {
+      "feature": 4028,
+      "top_sequences": [
+        "sp|P84715|ANF39_ORNAN",
+        "sp|Q2XXL8|VNP_VARVA",
+        "sp|Q27J49|BNP_LACMU",
+        "sp|D1MZV3|VNP_RHATT",
+        "sp|D9IX97|VNP_NAJAT",
+        "sp|Q9PTA2|IVBL_BUNMU",
+        "sp|F5CPE8|VNP_MICAT",
+        "sp|V5V9Y7|CQ62_CONCB",
+        "sp|P0DP56|PENKV_MEIAT",
+        "sp|P84035|VM3BA_BOTAS",
+        "sp|P0DQC5|TXG2A_ETHRU",
+        "sp|P0DXW9|TXUB_MEGOP",
+        "sp|Q27Q53|TX4_LOXIN",
+        "sp|P29426|TX29_PHONI",
+        "sp|D6C4K6|U6G_CONCL",
+        "sp|O18423|TXL_EISFE",
+        "sp|P0DJE2|VM3A_VIPAA",
+        "sp|P07374|UREA_CANEN",
+        "sp|P20005|VSP1_OVOOK",
+        "sp|P0DKR4|PA2AB_PSEFE"
+      ],
+      "top_enriched_aa": [
+        "G",
+        "P",
+        "H",
+        "R",
+        "L"
+      ],
+      "enrichment": {
+        "G": 1.417564931398921,
+        "P": 1.3378699653933093,
+        "H": 1.3329215436467383,
+        "R": 1.2963006670501946,
+        "L": 1.2001041832327446
+      },
+      "mean_activation": 0.05313936993479729,
+      "activation_rate": 0.005257009345794392
+    },
+    "5406": {
+      "feature": 5406,
+      "top_sequences": [
+        "sp|P84705|CREA_CONAW",
+        "sp|Q9PRM8|VSPAA_CERCE",
+        "sp|P84680|SC35_TITOB",
+        "sp|P0C8C8|STX7_SCOVN",
+        "sp|P0DJP5|PA2A_DABSI",
+        "sp|P0C8B8|STX2_SCOAN",
+        "sp|C0HJM7|TXL1_PHOPT",
+        "sp|P31351|BPP_VIPAS",
+        "sp|P0DRL0|PA23A_OXYSU",
+        "sp|P82141|DLP3_ORNAN",
+        "sp|Q9BPB3|CUU2_CONTE",
+        "sp|P86105|KAX6X_OPICY",
+        "sp|P84692|SC64_TITOB",
+        "sp|P84026|THBI_BOTJA",
+        "sp|P0C8C6|STX5_SCOVN",
+        "sp|P69392|PMTXB_BATMC",
+        "sp|P0DJ63|VKT_OXYMI",
+        "sp|P0C8J2|SL1C1_VIPAA",
+        "sp|B3EWG8|PA2A_PORNA",
+        "sp|C0HJW9|3NO21_NAJKA"
+      ],
+      "top_enriched_aa": [
+        "C",
+        "Q",
+        "F",
+        "R",
+        "P"
+      ],
+      "enrichment": {
+        "C": 1.599484974774604,
+        "Q": 1.494117000012808,
+        "F": 1.4918935533168403,
+        "R": 1.4158080262723436,
+        "P": 1.3708453625846255
+      },
+      "mean_activation": 0.1864832192659378,
+      "activation_rate": 0.2155373831775701
+    },
+    "8112": {
+      "feature": 8112,
+      "top_sequences": [
+        "sp|P86117|TX3_OPICY",
+        "sp|P0DV64|AIP9_SCOMU",
+        "sp|P0DMM7|SLB_TROWA",
+        "sp|P84679|SC33_TITOB",
+        "sp|P0CAR3|3S1E1_MICPY",
+        "sp|P0DRA9|TLCOE_LYCPR",
+        "sp|P0C8J1|SLB_OPHHA",
+        "sp|P59072|3S331_PSETE",
+        "sp|B3EWX4|TXS6D_CUPSA",
+        "sp|P84691|SC61_TITOB",
+        "sp|P84681|SC37_TITOB",
+        "sp|P84073|RIPL_LUFAE",
+        "sp|P0DJL6|CT5A_CONCN",
+        "sp|P85274|TX90A_CTEON",
+        "sp|Q9PS09|3SOBB_DENAN",
+        "sp|P84746|VVP1_BOTJR",
+        "sp|P0DQN0|CX69_CONCB",
+        "sp|P0DL01|BPPBG_BOTJA",
+        "sp|Q8I6R5|CA12_CONIM",
+        "sp|P84694|SC83_TITOB"
+      ],
+      "top_enriched_aa": [
+        "C",
+        "R",
+        "W",
+        "P",
+        "K"
+      ],
+      "enrichment": {
+        "C": 2.6493075217215556,
+        "R": 2.285186494959649,
+        "W": 1.6325723066791067,
+        "P": 1.5126719535724351,
+        "K": 1.3909096060952748
+      },
+      "mean_activation": 0.20633821189403534,
+      "activation_rate": 0.19976635514018692
+    },
+    "8284": {
+      "feature": 8284,
+      "top_sequences": [
+        "sp|P0DKZ0|CKR1B_CONRO",
+        "sp|E3PQQ8|CCAP_CONVL",
+        "sp|Q9BPD5|CT0C2_CONVE",
+        "sp|A0A088MIT0|BRKP2_PHYNA",
+        "sp|A0A023W0B6|TX85A_ETHRU",
+        "sp|P0DQF5|TXM1A_ETHRU",
+        "sp|P0DKP8|CA1G_CONCN",
+        "sp|A0A023W0C3|TX85D_ETHRU",
+        "sp|P83082|M3H2_BOMMX",
+        "sp|A2IAB2|XC43_XENCH",
+        "sp|Q9BP55|CM4C_CONPE",
+        "sp|A0A023VZR2|TX81A_CORWE",
+        "sp|P0C8W2|NDB4T_HOFGE",
+        "sp|P0DOZ7|CRFA_CONVC",
+        "sp|P0DUQ5|CLE1A_CONCL",
+        "sp|C7DT09|VP3_ORADR",
+        "sp|Q66S08|NATTP_THANI",
+        "sp|A0A023W0W9|TX85A_SCOMO",
+        "sp|Q9BPJ4|M236_CONTE",
+        "sp|P69391|PMTXA_ANOSM"
+      ],
+      "top_enriched_aa": [
+        "R",
+        "E",
+        "W",
+        "L",
+        "M"
+      ],
+      "enrichment": {
+        "R": 2.115946149454559,
+        "E": 1.7631354477731176,
+        "W": 1.6721063995923497,
+        "L": 1.383722268748586,
+        "M": 1.3288588012438014
+      },
+      "mean_activation": 0.18804602324962616,
+      "activation_rate": 0.20969626168224298
+    },
+    "9242": {
+      "feature": 9242,
+      "top_sequences": [
+        "sp|Q7LZF5|VSPC1_CROAT",
+        "sp|P0CC11|BENG_DECBE",
+        "sp|P86548|SBTXB_SOYBN",
+        "sp|P0DJE1|VM1B1_BOTAT",
+        "sp|P0C6A7|VM27B_VIPBB",
+        "sp|P86497|VSPR1_BITRH",
+        "sp|P81994|CRVP_TROCA",
+        "sp|C0HK19|VSP3_CRODU",
+        "sp|P0DJE4|LATA_LATMA",
+        "sp|Q9PRP9|VM3C1_ECHCA",
+        "sp|P0C7N3|VM3CR_CROVV",
+        "sp|Q9PRQ4|3SX4_MICNI",
+        "sp|C0HJQ0|SL1_BOTDP",
+        "sp|O93516|VM2S2_GLOBR",
+        "sp|P0DJG3|VSP1_BOTAN",
+        "sp|C0HLL1|VM2CD_CRODU",
+        "sp|P85842|VMXP_TITSE",
+        "sp|Q3SAF2|VNPD_PSEAU",
+        "sp|P0DI87|OXLA_BOTIN",
+        "sp|P0CAR2|3SO3_MICPY"
+      ],
+      "top_enriched_aa": [
+        "C",
+        "I",
+        "P",
+        "N",
+        "E"
+      ],
+      "enrichment": {
+        "C": 1.3359023652396202,
+        "I": 1.1789526578809182,
+        "P": 1.1556079223233848,
+        "N": 1.1253140215917932,
+        "E": 1.0962942956603046
+      },
+      "mean_activation": 0.31254369020462036,
+      "activation_rate": 0.19509345794392524
+    }
+  }
+}

@@ -1,0 +1,32 @@
+# AiXbio — requirements.txt
+# Install with: pip install -r requirements.txt
+
+# Core ML
+torch>=2.1.0
+transformers>=4.40.0
+accelerate>=0.27.0
+
+# Biology
+biopython>=1.83
+
+# SLT / LLC
+devinterp>=0.6.0
+
+# SAE
+# interplm is NOT on PyPI — install via: git clone https://github.com/ElanaPearl/interPLM && pip install -e ./interPLM
+# (handled automatically in 00_setup.ipynb)
+huggingface_hub>=0.22.0
+
+# Data / math
+numpy>=1.26.0
+pandas>=2.2.0
+scikit-learn>=1.4.0
+
+# Visualisation
+matplotlib>=3.8.0
+seaborn>=0.13.0
+umap-learn>=0.5.6
+
+# Utilities
+requests>=2.31.0
+tqdm>=4.66.0
