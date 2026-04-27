@@ -1,0 +1,2350 @@
+[
+  {
+    "id": "UniRef50_A0A011M2D3",
+    "score": 0.999618649482727,
+    "name": "Hemolysin, chromosomal",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Hemolysin, chromosomal n=1 Tax=Candidatus Accumulibacter adjunctus TaxID=1454001 RepID=A0A011M2D3_9PROT"
+  },
+  {
+    "id": "UniRef50_A0A009RXF9",
+    "score": 0.9995467066764832,
+    "name": "Uncharacterized protein",
+    "keywords": [],
+    "header_desc": "Uncharacterized protein (Fragment) n=1 Tax=Acinetobacter baumannii 99063 TaxID=1310630 RepID=A0A009RXF9_ACIBA"
+  },
+  {
+    "id": "UniRef50_A0A009QBX0",
+    "score": 0.9992596507072449,
+    "name": "Uncharacterized protein",
+    "keywords": [],
+    "header_desc": "Uncharacterized protein n=18 Tax=Acinetobacter baumannii TaxID=470 RepID=A0A009QBX0_ACIBA"
+  },
+  {
+    "id": "UniRef50_A0A010S8F7",
+    "score": 0.9992334842681885,
+    "name": "Uncharacterized protein",
+    "keywords": [],
+    "header_desc": "Uncharacterized protein n=1 Tax=Pseudomonas fluorescens HK44 TaxID=1042209 RepID=A0A010S8F7_PSEFL"
+  },
+  {
+    "id": "UniRef50_A0A011MGJ4",
+    "score": 0.9989123344421387,
+    "name": "Autotransporter adhesin",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Autotransporter adhesin n=1 Tax=Mannheimia granulomatis TaxID=85402 RepID=A0A011MGJ4_9PAST"
+  },
+  {
+    "id": "UniRef50_A0A011NZD2",
+    "score": 0.9987241625785828,
+    "name": "Ice-binding protein C-terminal domain-containing protein",
+    "keywords": [],
+    "header_desc": "Ice-binding protein C-terminal domain-containing protein n=2 Tax=Betaproteobacteria TaxID=28216 RepID=A0A011NZD2_9PROT"
+  },
+  {
+    "id": "UniRef50_A0A011NPQ7",
+    "score": 0.9984126091003418,
+    "name": "Poly(Beta-D-mannuronate) C5 epimerase 2",
+    "keywords": [
+      "Isomerase",
+      "Reference proteome"
+    ],
+    "header_desc": "Poly(Beta-D-mannuronate) C5 epimerase 2 n=2 Tax=Candidatus Accumulibacter TaxID=327159 RepID=A0A011NPQ7_9PROT"
+  },
+  {
+    "id": "UniRef50_A0A014LWD9",
+    "score": 0.9979592561721802,
+    "name": "Flagellar hook-associated protein 2",
+    "keywords": [
+      "Bacterial flagellum",
+      "Cell projection",
+      "Cilium",
+      "Coiled coil",
+      "Flagellum",
+      "Reference proteome",
+      "Secreted",
+      "Signal"
+    ],
+    "header_desc": "Flagellar hook-associated protein 2 n=67 Tax=Enterobacterales TaxID=91347 RepID=A0A014LWD9_9GAMM"
+  },
+  {
+    "id": "UniRef50_A0A011UYY6",
+    "score": 0.9979287385940552,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome",
+      "Signal"
+    ],
+    "header_desc": "Uncharacterized protein n=2 Tax=Ruminococcus TaxID=1263 RepID=A0A011UYY6_RUMAL"
+  },
+  {
+    "id": "UniRef50_A0A010R9F6",
+    "score": 0.9976648092269897,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome",
+      "Signal"
+    ],
+    "header_desc": "Uncharacterized protein n=18 Tax=Colletotrichum TaxID=5455 RepID=A0A010R9F6_9PEZI"
+  },
+  {
+    "id": "UniRef50_A0A010ZYM3",
+    "score": 0.9973756074905396,
+    "name": "Putative peptidoglycan-binding domain-containing protein",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Putative peptidoglycan-binding domain-containing protein n=1 Tax=Cryptosporangium arvum DSM 44712 TaxID=927661 RepID=A0A010ZYM3_9ACTN"
+  },
+  {
+    "id": "UniRef50_A0A010R059",
+    "score": 0.9973680377006531,
+    "name": "EC65 protein",
+    "keywords": [
+      "Reference proteome",
+      "Signal"
+    ],
+    "header_desc": "EC65 protein n=18 Tax=Colletotrichum TaxID=5455 RepID=A0A010R059_9PEZI"
+  },
+  {
+    "id": "UniRef50_A0A010SM29",
+    "score": 0.9973063468933105,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome",
+      "Signal"
+    ],
+    "header_desc": "Uncharacterized protein n=11 Tax=Colletotrichum TaxID=5455 RepID=A0A010SM29_9PEZI"
+  },
+  {
+    "id": "UniRef50_A0A009SE57",
+    "score": 0.9965149164199829,
+    "name": "GPI inositol-deacylase PGAP1-like alpha/beta domain-containing protein",
+    "keywords": [],
+    "header_desc": "GPI inositol-deacylase PGAP1-like alpha/beta domain-containing protein n=1031 Tax=Gammaproteobacteria TaxID=1236 RepID=A0A009SE57_ACIBA"
+  },
+  {
+    "id": "UniRef50_A0A011WT08",
+    "score": 0.9958990216255188,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Uncharacterized protein n=3 Tax=Ruminococcus TaxID=1263 RepID=A0A011WT08_RUMAL"
+  },
+  {
+    "id": "UniRef50_A0A009Q4U8",
+    "score": 0.9958743453025818,
+    "name": "TonB dependent receptor family protein",
+    "keywords": [
+      "Cell outer membrane",
+      "Membrane",
+      "Receptor",
+      "TonB box",
+      "Transmembrane",
+      "Transmembrane beta strand",
+      "Transport"
+    ],
+    "header_desc": "TonB dependent receptor family protein n=5 Tax=Acinetobacter TaxID=469 RepID=A0A009Q4U8_ACIBA"
+  },
+  {
+    "id": "UniRef50_A0A011WNG1",
+    "score": 0.9958090782165527,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Uncharacterized protein n=1 Tax=Ruminococcus albus SY3 TaxID=1341156 RepID=A0A011WNG1_RUMAL"
+  },
+  {
+    "id": "UniRef50_A0A010RBJ2",
+    "score": 0.9955203533172607,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome",
+      "Signal"
+    ],
+    "header_desc": "Uncharacterized protein n=20 Tax=Hypocreomycetidae TaxID=222543 RepID=A0A010RBJ2_9PEZI"
+  },
+  {
+    "id": "UniRef50_A0A010QA31",
+    "score": 0.9949467778205872,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome",
+      "Signal"
+    ],
+    "header_desc": "Uncharacterized protein n=10 Tax=Colletotrichum acutatum species complex TaxID=2707335 RepID=A0A010QA31_9PEZI"
+  },
+  {
+    "id": "UniRef50_A0A011NAP2",
+    "score": 0.9945400357246399,
+    "name": "Phage lysis regulatory protein, LysB family",
+    "keywords": [
+      "Coiled coil",
+      "Membrane",
+      "Reference proteome",
+      "Transmembrane",
+      "Transmembrane helix"
+    ],
+    "header_desc": "Phage lysis regulatory protein, LysB family n=15 RepID=A0A011NAP2_9PAST"
+  },
+  {
+    "id": "UniRef50_A0A010RZM7",
+    "score": 0.9945067763328552,
+    "name": "Secreted protein",
+    "keywords": [
+      "Reference proteome",
+      "Signal"
+    ],
+    "header_desc": "Secreted protein n=18 Tax=Colletotrichum TaxID=5455 RepID=A0A010RZM7_9PEZI"
+  },
+  {
+    "id": "UniRef50_A0A011WVP1",
+    "score": 0.9941673278808594,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome",
+      "Signal"
+    ],
+    "header_desc": "Uncharacterized protein n=4 Tax=Ruminococcus TaxID=1263 RepID=A0A011WVP1_RUMAL"
+  },
+  {
+    "id": "UniRef50_A0A011LWN1",
+    "score": 0.9937631487846375,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Uncharacterized protein n=1 Tax=Mannheimia granulomatis TaxID=85402 RepID=A0A011LWN1_9PAST"
+  },
+  {
+    "id": "UniRef50_A0A011VVU4",
+    "score": 0.9934974908828735,
+    "name": "Dockerin domain-containing protein",
+    "keywords": [
+      "Reference proteome",
+      "Signal"
+    ],
+    "header_desc": "Dockerin domain-containing protein n=4 Tax=Ruminococcus TaxID=1263 RepID=A0A011VVU4_RUMAL"
+  },
+  {
+    "id": "UniRef50_A0A011LWY2",
+    "score": 0.9932960867881775,
+    "name": "Lipoprotein",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Lipoprotein n=18 Tax=Mannheimia TaxID=75984 RepID=A0A011LWY2_9PAST"
+  },
+  {
+    "id": "UniRef50_A0A010R021",
+    "score": 0.9930441975593567,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome",
+      "Signal"
+    ],
+    "header_desc": "Uncharacterized protein n=12 Tax=Colletotrichum acutatum species complex TaxID=2707335 RepID=A0A010R021_9PEZI"
+  },
+  {
+    "id": "UniRef50_A0A009IHQ2",
+    "score": 0.9929639101028442,
+    "name": "AraC-like ligand binding domain protein",
+    "keywords": [
+      "DNA-binding"
+    ],
+    "header_desc": "AraC-like ligand binding domain protein n=3 Tax=Gammaproteobacteria TaxID=1236 RepID=A0A009IHQ2_ACIB9"
+  },
+  {
+    "id": "UniRef50_A0A011VZE4",
+    "score": 0.9928978681564331,
+    "name": "Cell surface protein",
+    "keywords": [
+      "Reference proteome",
+      "Signal"
+    ],
+    "header_desc": "Cell surface protein n=1 Tax=Ruminococcus albus SY3 TaxID=1341156 RepID=A0A011VZE4_RUMAL"
+  },
+  {
+    "id": "UniRef50_A0A009QLT9",
+    "score": 0.9928447604179382,
+    "name": "dTDP-4-dehydrorhamnose 3,5-epimerase",
+    "keywords": [
+      "Isomerase"
+    ],
+    "header_desc": "dTDP-4-dehydrorhamnose 3,5-epimerase n=1 Tax=Acinetobacter baumannii 625974 TaxID=1310607 RepID=A0A009QLT9_ACIBA"
+  },
+  {
+    "id": "UniRef50_A0A010R391",
+    "score": 0.9927650094032288,
+    "name": "Secreted protein",
+    "keywords": [
+      "Reference proteome",
+      "Signal"
+    ],
+    "header_desc": "Secreted protein n=21 Tax=Colletotrichum TaxID=5455 RepID=A0A010R391_9PEZI"
+  },
+  {
+    "id": "UniRef50_A0A011N233",
+    "score": 0.9927380681037903,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Signal"
+    ],
+    "header_desc": "Uncharacterized protein n=3 Tax=Pseudomonadota TaxID=1224 RepID=A0A011N233_9PROT"
+  },
+  {
+    "id": "UniRef50_A0A011UJQ3",
+    "score": 0.9924390316009521,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Membrane",
+      "Reference proteome",
+      "Transmembrane",
+      "Transmembrane helix"
+    ],
+    "header_desc": "Uncharacterized protein n=2 Tax=Ruminococcus TaxID=1263 RepID=A0A011UJQ3_RUMAL"
+  },
+  {
+    "id": "UniRef50_A0A011NQ47",
+    "score": 0.9922269582748413,
+    "name": "Leukotoxin",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Leukotoxin n=3 Tax=Candidatus Accumulibacter TaxID=327159 RepID=A0A011NQ47_9PROT"
+  },
+  {
+    "id": "UniRef50_A0A011UI05",
+    "score": 0.9917622804641724,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Uncharacterized protein n=1 Tax=Ruminococcus albus SY3 TaxID=1341156 RepID=A0A011UI05_RUMAL"
+  },
+  {
+    "id": "UniRef50_A0A011UZZ3",
+    "score": 0.9916831254959106,
+    "name": "Nitrite/Sulfite reductase ferredoxin-like domain-containing protein",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Nitrite/Sulfite reductase ferredoxin-like domain-containing protein n=1 Tax=Ruminococcus albus SY3 TaxID=1341156 RepID=A0A011UZZ3_RUMAL"
+  },
+  {
+    "id": "UniRef50_A0A010RIS8",
+    "score": 0.991578221321106,
+    "name": "Uncharacterized protein",
+    "keywords": [],
+    "header_desc": "Uncharacterized protein n=1 Tax=Pseudomonas fluorescens HK44 TaxID=1042209 RepID=A0A010RIS8_PSEFL"
+  },
+  {
+    "id": "UniRef50_A0A011VTX6",
+    "score": 0.9910518527030945,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Membrane",
+      "Reference proteome",
+      "Transmembrane",
+      "Transmembrane helix"
+    ],
+    "header_desc": "Uncharacterized protein n=7 Tax=Ruminococcus TaxID=1263 RepID=A0A011VTX6_RUMAL"
+  },
+  {
+    "id": "UniRef50_A0A009I0Z3",
+    "score": 0.9907904863357544,
+    "name": "Uncharacterized protein",
+    "keywords": [],
+    "header_desc": "Uncharacterized protein n=1 Tax=Acinetobacter baumannii TaxID=1310613 RepID=A0A009I0Z3_ACIB9"
+  },
+  {
+    "id": "UniRef50_A0A010QVB0",
+    "score": 0.9904810786247253,
+    "name": "Ecp2 effector protein domain-containing protein",
+    "keywords": [
+      "Reference proteome",
+      "Signal"
+    ],
+    "header_desc": "Ecp2 effector protein domain-containing protein n=15 Tax=Colletotrichum acutatum species complex TaxID=2707335 RepID=A0A010QVB0_9PEZI"
+  },
+  {
+    "id": "UniRef50_A0A010S4Q6",
+    "score": 0.9900490045547485,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome",
+      "Signal"
+    ],
+    "header_desc": "Uncharacterized protein n=26 Tax=Colletotrichum TaxID=5455 RepID=A0A010S4Q6_9PEZI"
+  },
+  {
+    "id": "UniRef50_A0A011LVJ0",
+    "score": 0.9898964166641235,
+    "name": "Adhesin",
+    "keywords": [
+      "Cell outer membrane",
+      "Membrane",
+      "Protein transport",
+      "Reference proteome",
+      "Signal",
+      "Transmembrane",
+      "Transmembrane beta strand",
+      "Transport"
+    ],
+    "header_desc": "Adhesin (Fragment) n=2 Tax=Mannheimia granulomatis TaxID=85402 RepID=A0A011LVJ0_9PAST"
+  },
+  {
+    "id": "UniRef50_A0A011NT58",
+    "score": 0.9897691011428833,
+    "name": "AAA domain-containing protein",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "AAA domain-containing protein n=1 Tax=Candidatus Accumulibacter adjunctus TaxID=1454001 RepID=A0A011NT58_9PROT"
+  },
+  {
+    "id": "UniRef50_A0A011Q0Y8",
+    "score": 0.9897348880767822,
+    "name": "Uncharacterized protein",
+    "keywords": [],
+    "header_desc": "Uncharacterized protein n=1 Tax=Candidatus Accumulibacter appositus TaxID=1454003 RepID=A0A011Q0Y8_9PROT"
+  },
+  {
+    "id": "UniRef50_A0A009RTG2",
+    "score": 0.9895896315574646,
+    "name": "HupE / UreJ family protein",
+    "keywords": [],
+    "header_desc": "HupE / UreJ family protein (Fragment) n=2 Tax=Acinetobacter baumannii TaxID=470 RepID=A0A009RTG2_ACIBA"
+  },
+  {
+    "id": "UniRef50_A0A009HMB0",
+    "score": 0.9895416498184204,
+    "name": "Uncharacterized protein",
+    "keywords": [],
+    "header_desc": "Uncharacterized protein n=5 Tax=Acinetobacter baumannii TaxID=470 RepID=A0A009HMB0_ACIB9"
+  },
+  {
+    "id": "UniRef50_A0A011VXX9",
+    "score": 0.9894977807998657,
+    "name": "Dockerin domain-containing protein",
+    "keywords": [
+      "Reference proteome",
+      "Signal"
+    ],
+    "header_desc": "Dockerin domain-containing protein n=5 Tax=Ruminococcus TaxID=1263 RepID=A0A011VXX9_RUMAL"
+  },
+  {
+    "id": "UniRef50_A0A009P8E8",
+    "score": 0.989303469657898,
+    "name": "Uncharacterized protein",
+    "keywords": [],
+    "header_desc": "Uncharacterized protein n=1 Tax=Acinetobacter baumannii 625974 TaxID=1310607 RepID=A0A009P8E8_ACIBA"
+  },
+  {
+    "id": "UniRef50_A0A010SN48",
+    "score": 0.9892100691795349,
+    "name": "Heme utilization protein",
+    "keywords": [
+      "Signal"
+    ],
+    "header_desc": "Heme utilization protein n=135 Tax=Gammaproteobacteria TaxID=1236 RepID=A0A010SN48_PSEFL"
+  },
+  {
+    "id": "UniRef50_A0A010SV51",
+    "score": 0.9886975288391113,
+    "name": "Uncharacterized protein",
+    "keywords": [],
+    "header_desc": "Uncharacterized protein n=1 Tax=Pseudomonas fluorescens HK44 TaxID=1042209 RepID=A0A010SV51_PSEFL"
+  },
+  {
+    "id": "UniRef50_A0A011U2H6",
+    "score": 0.9886777997016907,
+    "name": "Uncharacterized protein",
+    "keywords": [],
+    "header_desc": "Uncharacterized protein n=1 Tax=Aquamicrobium defluvii TaxID=69279 RepID=A0A011U2H6_9HYPH"
+  },
+  {
+    "id": "UniRef50_A0A011SU40",
+    "score": 0.9886365532875061,
+    "name": "Uncharacterized protein",
+    "keywords": [],
+    "header_desc": "Uncharacterized protein n=1 Tax=Aquamicrobium defluvii TaxID=69279 RepID=A0A011SU40_9HYPH"
+  },
+  {
+    "id": "UniRef50_A0A011UZ27",
+    "score": 0.9880730509757996,
+    "name": "Toxic anion resistance protein",
+    "keywords": [
+      "Coiled coil",
+      "Reference proteome"
+    ],
+    "header_desc": "Toxic anion resistance protein n=9 Tax=Ruminococcus TaxID=1263 RepID=A0A011UZ27_RUMAL"
+  },
+  {
+    "id": "UniRef50_A0A011P6Q2",
+    "score": 0.9871139526367188,
+    "name": "Twin-arginine translocation signal domain-containing protein",
+    "keywords": [
+      "Reference proteome",
+      "Signal"
+    ],
+    "header_desc": "Twin-arginine translocation signal domain-containing protein n=1 Tax=Mannheimia granulomatis TaxID=85402 RepID=A0A011P6Q2_9PAST"
+  },
+  {
+    "id": "UniRef50_A0A010RK46",
+    "score": 0.9870936274528503,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome",
+      "Signal"
+    ],
+    "header_desc": "Uncharacterized protein n=33 Tax=Glomerellales TaxID=1028384 RepID=A0A010RK46_9PEZI"
+  },
+  {
+    "id": "UniRef50_A0A011PXN3",
+    "score": 0.9868128895759583,
+    "name": "Uncharacterized protein",
+    "keywords": [],
+    "header_desc": "Uncharacterized protein n=1 Tax=Candidatus Accumulibacter appositus TaxID=1454003 RepID=A0A011PXN3_9PROT"
+  },
+  {
+    "id": "UniRef50_A0A011PMP1",
+    "score": 0.9862514138221741,
+    "name": "Conjugal transfer mating pair stabilization protein TraG",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Conjugal transfer mating pair stabilization protein TraG n=1 Tax=Candidatus Accumulibacter adjunctus TaxID=1454001 RepID=A0A011PMP1_9PROT"
+  },
+  {
+    "id": "UniRef50_A0A011WKN5",
+    "score": 0.986024796962738,
+    "name": "Beta-xylanase",
+    "keywords": [
+      "Carbohydrate metabolism",
+      "Glycosidase",
+      "Hydrolase",
+      "Polysaccharide degradation",
+      "Reference proteome",
+      "Repeat",
+      "Signal",
+      "Xylan degradation"
+    ],
+    "header_desc": "Beta-xylanase n=14 Tax=Ruminococcus TaxID=1263 RepID=A0A011WKN5_RUMAL"
+  },
+  {
+    "id": "UniRef50_A0A011P8V7",
+    "score": 0.9859532117843628,
+    "name": "Copper resistance protein A",
+    "keywords": [],
+    "header_desc": "Copper resistance protein A n=1 Tax=Candidatus Accumulibacter appositus TaxID=1454003 RepID=A0A011P8V7_9PROT"
+  },
+  {
+    "id": "UniRef50_A0A011V5W1",
+    "score": 0.9858505129814148,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Uncharacterized protein n=1 Tax=Ruminococcus albus SY3 TaxID=1341156 RepID=A0A011V5W1_RUMAL"
+  },
+  {
+    "id": "UniRef50_A0A010T074",
+    "score": 0.9851670861244202,
+    "name": "Transposase",
+    "keywords": [],
+    "header_desc": "Transposase n=2 Tax=Pseudomonas TaxID=286 RepID=A0A010T074_PSEFL"
+  },
+  {
+    "id": "UniRef50_A0A011MW75",
+    "score": 0.9848710894584656,
+    "name": "Alpha/beta hydrolase family protein",
+    "keywords": [
+      "Hydrolase",
+      "Membrane",
+      "Reference proteome",
+      "Transmembrane",
+      "Transmembrane helix"
+    ],
+    "header_desc": "Alpha/beta hydrolase family protein n=1 Tax=Candidatus Accumulibacter adjunctus TaxID=1454001 RepID=A0A011MW75_9PROT"
+  },
+  {
+    "id": "UniRef50_A0A011R389",
+    "score": 0.9845945835113525,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Uncharacterized protein n=1 Tax=Accumulibacter regalis TaxID=522306 RepID=A0A011R389_ACCRE"
+  },
+  {
+    "id": "UniRef50_A0A011PD07",
+    "score": 0.9845255017280579,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Uncharacterized protein n=1 Tax=Candidatus Accumulibacter adjunctus TaxID=1454001 RepID=A0A011PD07_9PROT"
+  },
+  {
+    "id": "UniRef50_A0A010SE53",
+    "score": 0.984438955783844,
+    "name": "Secreted protein",
+    "keywords": [
+      "Reference proteome",
+      "Signal"
+    ],
+    "header_desc": "Secreted protein n=10 Tax=Colletotrichum acutatum species complex TaxID=2707335 RepID=A0A010SE53_9PEZI"
+  },
+  {
+    "id": "UniRef50_A0A011NSQ7",
+    "score": 0.9842007756233215,
+    "name": "Cell division protein FtsZ",
+    "keywords": [
+      "Cell cycle",
+      "Cell division",
+      "GTP-binding",
+      "Nucleotide-binding",
+      "Reference proteome"
+    ],
+    "header_desc": "Cell division protein FtsZ n=1 Tax=Candidatus Accumulibacter adjunctus TaxID=1454001 RepID=A0A011NSQ7_9PROT"
+  },
+  {
+    "id": "UniRef50_A0A010RQC2",
+    "score": 0.9840911030769348,
+    "name": "LTXXQ motif family protein",
+    "keywords": [
+      "Signal"
+    ],
+    "header_desc": "LTXXQ motif family protein n=80 Tax=Pseudomonas TaxID=286 RepID=A0A010RQC2_PSEFL"
+  },
+  {
+    "id": "UniRef50_A0A010QBA0",
+    "score": 0.983346700668335,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome",
+      "Signal"
+    ],
+    "header_desc": "Uncharacterized protein n=10 Tax=leotiomyceta TaxID=716546 RepID=A0A010QBA0_9PEZI"
+  },
+  {
+    "id": "UniRef50_A0A011VTD6",
+    "score": 0.9820873141288757,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Uncharacterized protein n=1 Tax=Ruminococcus albus SY3 TaxID=1341156 RepID=A0A011VTD6_RUMAL"
+  },
+  {
+    "id": "UniRef50_A0A010QNZ4",
+    "score": 0.9817999601364136,
+    "name": "Proclavaminate amidinohydrolase",
+    "keywords": [
+      "Hydrolase",
+      "Reference proteome",
+      "Signal"
+    ],
+    "header_desc": "Proclavaminate amidinohydrolase n=3 Tax=Colletotrichum acutatum species complex TaxID=2707335 RepID=A0A010QNZ4_9PEZI"
+  },
+  {
+    "id": "UniRef50_A0A011NNM9",
+    "score": 0.9815473556518555,
+    "name": "CDP-diacylglycerol pyrophosphatase",
+    "keywords": [
+      "Cell membrane",
+      "Hydrolase",
+      "Lipid biosynthesis",
+      "Lipid metabolism",
+      "Membrane",
+      "Phospholipid biosynthesis",
+      "Phospholipid metabolism",
+      "Reference proteome",
+      "Transmembrane",
+      "Transmembrane helix"
+    ],
+    "header_desc": "CDP-diacylglycerol pyrophosphatase n=1 Tax=Candidatus Accumulibacter adjunctus TaxID=1454001 RepID=A0A011NNM9_9PROT"
+  },
+  {
+    "id": "UniRef50_A0A011MNT8",
+    "score": 0.9810073971748352,
+    "name": "Cyclolysin",
+    "keywords": [
+      "Reference proteome",
+      "Secreted"
+    ],
+    "header_desc": "Cyclolysin n=1 Tax=Candidatus Accumulibacter adjunctus TaxID=1454001 RepID=A0A011MNT8_9PROT"
+  },
+  {
+    "id": "UniRef50_A0A011NXP8",
+    "score": 0.9804038405418396,
+    "name": "DUF2460 domain-containing protein",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "DUF2460 domain-containing protein n=10 Tax=Pseudomonadota TaxID=1224 RepID=A0A011NXP8_ACCRE"
+  },
+  {
+    "id": "UniRef50_A0A009Q3N1",
+    "score": 0.9801926016807556,
+    "name": "Bacterial Ig-like domain family protein",
+    "keywords": [],
+    "header_desc": "Bacterial Ig-like domain family protein (Fragment) n=3 Tax=Acinetobacter baumannii TaxID=470 RepID=A0A009Q3N1_ACIBA"
+  },
+  {
+    "id": "UniRef50_A0A014KWL9",
+    "score": 0.9799363613128662,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Membrane",
+      "Signal",
+      "Transmembrane",
+      "Transmembrane helix"
+    ],
+    "header_desc": "Uncharacterized protein n=342 Tax=Mesomycoplasma TaxID=2923352 RepID=A0A014KWL9_9BACT"
+  },
+  {
+    "id": "UniRef50_A0A011VXB7",
+    "score": 0.9799362421035767,
+    "name": "CRISPR system single-strand-specific deoxyribonuclease Cas10/Csm1 (subtype III-A)",
+    "keywords": [
+      "Antiviral defense",
+      "ATP-binding",
+      "Endonuclease",
+      "Exonuclease",
+      "Hydrolase",
+      "Nuclease",
+      "Nucleotide-binding",
+      "Reference proteome",
+      "Transferase"
+    ],
+    "header_desc": "CRISPR system single-strand-specific deoxyribonuclease Cas10/Csm1 (subtype III-A) n=33 Tax=Clostridia TaxID=186801 RepID=A0A011VXB7_RUMAL"
+  },
+  {
+    "id": "UniRef50_A0A011NAC3",
+    "score": 0.9792659878730774,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome",
+      "Signal"
+    ],
+    "header_desc": "Uncharacterized protein n=5 Tax=Pasteurellaceae TaxID=712 RepID=A0A011NAC3_9PAST"
+  },
+  {
+    "id": "UniRef50_A0A011NBK5",
+    "score": 0.9790105819702148,
+    "name": "Uncharacterized protein",
+    "keywords": [],
+    "header_desc": "Uncharacterized protein n=1 Tax=Candidatus Accumulibacter appositus TaxID=1454003 RepID=A0A011NBK5_9PROT"
+  },
+  {
+    "id": "UniRef50_A0A011V951",
+    "score": 0.9780494570732117,
+    "name": "RES domain-containing protein",
+    "keywords": [],
+    "header_desc": "RES domain-containing protein n=2 Tax=Phyllobacteriaceae TaxID=69277 RepID=A0A011V951_9HYPH"
+  },
+  {
+    "id": "UniRef50_A0A009RH09",
+    "score": 0.9778843522071838,
+    "name": "Plasmid mobilization domain protein",
+    "keywords": [
+      "Coiled coil"
+    ],
+    "header_desc": "Plasmid mobilization domain protein (Fragment) n=1 Tax=Acinetobacter baumannii 99063 TaxID=1310630 RepID=A0A009RH09_ACIBA"
+  },
+  {
+    "id": "UniRef50_A0A011MGM1",
+    "score": 0.9776145219802856,
+    "name": "Replication protein",
+    "keywords": [
+      "DNA replication",
+      "Endonuclease",
+      "Hydrolase",
+      "Nuclease",
+      "Reference proteome"
+    ],
+    "header_desc": "Replication protein n=35 Tax=Pasteurellaceae TaxID=712 RepID=A0A011MGM1_9PAST"
+  },
+  {
+    "id": "UniRef50_A0A011P4Q4",
+    "score": 0.9775840640068054,
+    "name": "Thermonuclease",
+    "keywords": [
+      "Hydrolase"
+    ],
+    "header_desc": "Thermonuclease n=13 Tax=Betaproteobacteria TaxID=28216 RepID=A0A011P4Q4_9PROT"
+  },
+  {
+    "id": "UniRef50_A0A011Q3Z3",
+    "score": 0.9772856831550598,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Uncharacterized protein n=3 Tax=Candidatus Accumulibacter TaxID=327159 RepID=A0A011Q3Z3_ACCRE"
+  },
+  {
+    "id": "UniRef50_A0A011QGS1",
+    "score": 0.9771004915237427,
+    "name": "Chalcone isomerase domain-containing protein",
+    "keywords": [
+      "Reference proteome",
+      "Signal"
+    ],
+    "header_desc": "Chalcone isomerase domain-containing protein n=31 Tax=Betaproteobacteria TaxID=28216 RepID=A0A011QGS1_ACCRE"
+  },
+  {
+    "id": "UniRef50_A0A010SLX9",
+    "score": 0.9769743084907532,
+    "name": "Type 1 fimbrial protein",
+    "keywords": [
+      "Signal"
+    ],
+    "header_desc": "Type 1 fimbrial protein n=116 Tax=Pseudomonas TaxID=286 RepID=A0A010SLX9_PSEFL"
+  },
+  {
+    "id": "UniRef50_A0A011MI27",
+    "score": 0.9765728116035461,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome",
+      "Signal"
+    ],
+    "header_desc": "Uncharacterized protein n=1 Tax=Mannheimia granulomatis TaxID=85402 RepID=A0A011MI27_9PAST"
+  },
+  {
+    "id": "UniRef50_A0A011PSH0",
+    "score": 0.9753159880638123,
+    "name": "Uncharacterized protein",
+    "keywords": [],
+    "header_desc": "Uncharacterized protein n=2 Tax=Candidatus Accumulibacter appositus TaxID=1454003 RepID=A0A011PSH0_9PROT"
+  },
+  {
+    "id": "UniRef50_A0A011VVF0",
+    "score": 0.975091278553009,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Uncharacterized protein n=1 Tax=Ruminococcus albus SY3 TaxID=1341156 RepID=A0A011VVF0_RUMAL"
+  },
+  {
+    "id": "UniRef50_A0A010RRD3",
+    "score": 0.9741127490997314,
+    "name": "Uncharacterized protein",
+    "keywords": [],
+    "header_desc": "Uncharacterized protein n=1 Tax=Pseudomonas fluorescens HK44 TaxID=1042209 RepID=A0A010RRD3_PSEFL"
+  },
+  {
+    "id": "UniRef50_A0A011UJD2",
+    "score": 0.9738492369651794,
+    "name": "Membrane protein",
+    "keywords": [
+      "Membrane",
+      "Transmembrane",
+      "Transmembrane helix"
+    ],
+    "header_desc": "Membrane protein n=1 Tax=Aquamicrobium defluvii TaxID=69279 RepID=A0A011UJD2_9HYPH"
+  },
+  {
+    "id": "UniRef50_A0A010ZPL1",
+    "score": 0.9736980199813843,
+    "name": "Molecular chaperone DnaJ",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Molecular chaperone DnaJ n=2 Tax=Cryptosporangium TaxID=65502 RepID=A0A010ZPL1_9ACTN"
+  },
+  {
+    "id": "UniRef50_A0A010YQ05",
+    "score": 0.9724848866462708,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Membrane",
+      "Reference proteome",
+      "Transmembrane",
+      "Transmembrane helix"
+    ],
+    "header_desc": "Uncharacterized protein n=1 Tax=Cryptosporangium arvum DSM 44712 TaxID=927661 RepID=A0A010YQ05_9ACTN"
+  },
+  {
+    "id": "UniRef50_A0A010ZV02",
+    "score": 0.9722433686256409,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Uncharacterized protein n=1 Tax=Cryptosporangium arvum DSM 44712 TaxID=927661 RepID=A0A010ZV02_9ACTN"
+  },
+  {
+    "id": "UniRef50_A0A009RRF1",
+    "score": 0.9717974662780762,
+    "name": "Uncharacterized protein",
+    "keywords": [],
+    "header_desc": "Uncharacterized protein n=1 Tax=Acinetobacter baumannii 99063 TaxID=1310630 RepID=A0A009RRF1_ACIBA"
+  },
+  {
+    "id": "UniRef50_A0A011R843",
+    "score": 0.971068263053894,
+    "name": "Aminopeptidase",
+    "keywords": [
+      "Aminopeptidase",
+      "Hydrolase",
+      "Protease",
+      "Reference proteome",
+      "Signal"
+    ],
+    "header_desc": "Aminopeptidase n=37 Tax=Pseudomonadota TaxID=1224 RepID=A0A011R843_ACCRE"
+  },
+  {
+    "id": "UniRef50_A0A010ZW14",
+    "score": 0.9709685444831848,
+    "name": "Secreted protein",
+    "keywords": [
+      "Reference proteome",
+      "Signal"
+    ],
+    "header_desc": "Secreted protein n=1 Tax=Cryptosporangium arvum DSM 44712 TaxID=927661 RepID=A0A010ZW14_9ACTN"
+  },
+  {
+    "id": "UniRef50_A0A011W096",
+    "score": 0.9707806706428528,
+    "name": "Transglutaminase-like domain-containing protein",
+    "keywords": [
+      "Reference proteome",
+      "Signal"
+    ],
+    "header_desc": "Transglutaminase-like domain-containing protein n=9 Tax=Ruminococcus TaxID=1263 RepID=A0A011W096_RUMAL"
+  },
+  {
+    "id": "UniRef50_A0A014KVQ9",
+    "score": 0.9706777930259705,
+    "name": "High affinity transport system protein",
+    "keywords": [
+      "Lipoprotein",
+      "Signal",
+      "Transport"
+    ],
+    "header_desc": "High affinity transport system protein n=107 Tax=Mycoplasmatota TaxID=544448 RepID=A0A014KVQ9_9BACT"
+  },
+  {
+    "id": "UniRef50_A0A011PRM2",
+    "score": 0.9703665375709534,
+    "name": "Uncharacterized protein",
+    "keywords": [],
+    "header_desc": "Uncharacterized protein n=2 Tax=Candidatus Accumulibacter TaxID=327159 RepID=A0A011PRM2_9PROT"
+  },
+  {
+    "id": "UniRef50_A0A011NEU8",
+    "score": 0.9699221253395081,
+    "name": "Uncharacterized protein",
+    "keywords": [],
+    "header_desc": "Uncharacterized protein n=2 Tax=Candidatus Accumulibacter TaxID=327159 RepID=A0A011NEU8_9PROT"
+  },
+  {
+    "id": "UniRef50_A0A009S208",
+    "score": 0.9695572257041931,
+    "name": "Uncharacterized protein",
+    "keywords": [],
+    "header_desc": "Uncharacterized protein (Fragment) n=1 Tax=Acinetobacter baumannii 99063 TaxID=1310630 RepID=A0A009S208_ACIBA"
+  },
+  {
+    "id": "UniRef50_A0A011W0B8",
+    "score": 0.9688113331794739,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Uncharacterized protein n=2 Tax=Ruminococcus TaxID=1263 RepID=A0A011W0B8_RUMAL"
+  },
+  {
+    "id": "UniRef50_A0A009RNB2",
+    "score": 0.9688085317611694,
+    "name": "CobQ/CobB/MinD/ParA nucleotide binding domain protein",
+    "keywords": [],
+    "header_desc": "CobQ/CobB/MinD/ParA nucleotide binding domain protein (Fragment) n=4 Tax=Bacteria TaxID=2 RepID=A0A009RNB2_ACIBA"
+  },
+  {
+    "id": "UniRef50_A0A011P7V1",
+    "score": 0.9684550762176514,
+    "name": "Membrane-bound lytic murein transglycosylase C",
+    "keywords": [
+      "Lyase",
+      "Reference proteome",
+      "Signal"
+    ],
+    "header_desc": "Membrane-bound lytic murein transglycosylase C n=284 Tax=Bacteria TaxID=2 RepID=A0A011P7V1_ACCRE"
+  },
+  {
+    "id": "UniRef50_A0A011NEP2",
+    "score": 0.9681226015090942,
+    "name": "Tetratricopeptide repeat protein",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Tetratricopeptide repeat protein n=2 Tax=Mannheimia granulomatis TaxID=85402 RepID=A0A011NEP2_9PAST"
+  },
+  {
+    "id": "UniRef50_A0A009HI65",
+    "score": 0.9680806994438171,
+    "name": "Bacterial regulatory helix-turn-helix s, AraC family protein",
+    "keywords": [
+      "DNA-binding",
+      "Transcription",
+      "Transcription regulation"
+    ],
+    "header_desc": "Bacterial regulatory helix-turn-helix s, AraC family protein n=8 Tax=Acinetobacter TaxID=469 RepID=A0A009HI65_ACIB9"
+  },
+  {
+    "id": "UniRef50_A0A010Q7A4",
+    "score": 0.9673484563827515,
+    "name": "Necrosis inducing protein",
+    "keywords": [
+      "Reference proteome",
+      "Signal"
+    ],
+    "header_desc": "Necrosis inducing protein n=3 Tax=leotiomyceta TaxID=716546 RepID=A0A010Q7A4_9PEZI"
+  },
+  {
+    "id": "UniRef50_A0A009IR40",
+    "score": 0.9667147397994995,
+    "name": "Beta family protein",
+    "keywords": [],
+    "header_desc": "Beta family protein n=1 Tax=Acinetobacter baumannii TaxID=1310613 RepID=A0A009IR40_ACIB9"
+  },
+  {
+    "id": "UniRef50_A0A010SH39",
+    "score": 0.9666520953178406,
+    "name": "Uncharacterized protein",
+    "keywords": [],
+    "header_desc": "Uncharacterized protein n=2 Tax=Pseudomonas TaxID=286 RepID=A0A010SH39_PSEFL"
+  },
+  {
+    "id": "UniRef50_A0A009ST15",
+    "score": 0.9662962555885315,
+    "name": "Uncharacterized protein",
+    "keywords": [],
+    "header_desc": "Uncharacterized protein n=1 Tax=Acinetobacter baumannii 99063 TaxID=1310630 RepID=A0A009ST15_ACIBA"
+  },
+  {
+    "id": "UniRef50_A0A010S3D2",
+    "score": 0.9659416079521179,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Uncharacterized protein n=4 Tax=Colletotrichum acutatum species complex TaxID=2707335 RepID=A0A010S3D2_9PEZI"
+  },
+  {
+    "id": "UniRef50_A0A010RTT3",
+    "score": 0.9658288359642029,
+    "name": "FAD binding domain-containing protein",
+    "keywords": [
+      "FAD",
+      "Flavoprotein",
+      "Oxidoreductase",
+      "Reference proteome",
+      "Signal"
+    ],
+    "header_desc": "FAD binding domain-containing protein n=1 Tax=Colletotrichum fioriniae PJ7 TaxID=1445577 RepID=A0A010RTT3_9PEZI"
+  },
+  {
+    "id": "UniRef50_A0A010TBK1",
+    "score": 0.9654901623725891,
+    "name": "Valyl-tRNA synthetase",
+    "keywords": [
+      "Signal"
+    ],
+    "header_desc": "Valyl-tRNA synthetase n=1 Tax=Pseudomonas fluorescens HK44 TaxID=1042209 RepID=A0A010TBK1_PSEFL"
+  },
+  {
+    "id": "UniRef50_A0A009T536",
+    "score": 0.9652345180511475,
+    "name": "Uncharacterized protein",
+    "keywords": [],
+    "header_desc": "Uncharacterized protein n=1 Tax=Acinetobacter baumannii 99063 TaxID=1310630 RepID=A0A009T536_ACIBA"
+  },
+  {
+    "id": "UniRef50_A0A011MGN5",
+    "score": 0.9647707343101501,
+    "name": "DNA helicase UvrD",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "DNA helicase UvrD n=148 RepID=A0A011MGN5_9PAST"
+  },
+  {
+    "id": "UniRef50_A0A011NIH0",
+    "score": 0.9634453654289246,
+    "name": "Uncharacterized protein",
+    "keywords": [],
+    "header_desc": "Uncharacterized protein n=1 Tax=Candidatus Accumulibacter appositus TaxID=1454003 RepID=A0A011NIH0_9PROT"
+  },
+  {
+    "id": "UniRef50_A0A011Q5C6",
+    "score": 0.9630268216133118,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome",
+      "Signal"
+    ],
+    "header_desc": "Uncharacterized protein n=1 Tax=Accumulibacter regalis TaxID=522306 RepID=A0A011Q5C6_ACCRE"
+  },
+  {
+    "id": "UniRef50_A0A011WND3",
+    "score": 0.9621056914329529,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Uncharacterized protein n=1 Tax=Ruminococcus albus SY3 TaxID=1341156 RepID=A0A011WND3_RUMAL"
+  },
+  {
+    "id": "UniRef50_A0A009TKB8",
+    "score": 0.9616647958755493,
+    "name": "Uncharacterized protein",
+    "keywords": [],
+    "header_desc": "Uncharacterized protein n=28 Tax=Acinetobacter baumannii TaxID=470 RepID=A0A009TKB8_ACIBA"
+  },
+  {
+    "id": "UniRef50_A0A010SU47",
+    "score": 0.9609634876251221,
+    "name": "Uncharacterized protein",
+    "keywords": [],
+    "header_desc": "Uncharacterized protein n=1 Tax=Pseudomonas fluorescens HK44 TaxID=1042209 RepID=A0A010SU47_PSEFL"
+  },
+  {
+    "id": "UniRef50_A0A010ZXX8",
+    "score": 0.9601643085479736,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome",
+      "Signal"
+    ],
+    "header_desc": "Uncharacterized protein n=6 Tax=Cryptosporangium TaxID=65502 RepID=A0A010ZXX8_9ACTN"
+  },
+  {
+    "id": "UniRef50_A0A010TGW1",
+    "score": 0.9596078991889954,
+    "name": "Uncharacterized protein",
+    "keywords": [],
+    "header_desc": "Uncharacterized protein n=5 Tax=Gammaproteobacteria TaxID=1236 RepID=A0A010TGW1_PSEFL"
+  },
+  {
+    "id": "UniRef50_A0A011PFV1",
+    "score": 0.9591262936592102,
+    "name": "Uncharacterized protein",
+    "keywords": [],
+    "header_desc": "Uncharacterized protein n=1 Tax=Candidatus Accumulibacter appositus TaxID=1454003 RepID=A0A011PFV1_9PROT"
+  },
+  {
+    "id": "UniRef50_A0A010RKH8",
+    "score": 0.9585368037223816,
+    "name": "Solute-binding protein family 5 domain-containing protein",
+    "keywords": [
+      "Peptide transport",
+      "Protein transport",
+      "Signal",
+      "Transport"
+    ],
+    "header_desc": "Solute-binding protein family 5 domain-containing protein n=3163 Tax=Pseudomonadati TaxID=3379134 RepID=A0A010RKH8_PSEFL"
+  },
+  {
+    "id": "UniRef50_A0A010TEI3",
+    "score": 0.9580513834953308,
+    "name": "Molecular chaperone EcpD",
+    "keywords": [
+      "Chaperone",
+      "Periplasm",
+      "Signal"
+    ],
+    "header_desc": "Molecular chaperone EcpD n=13 Tax=Pseudomonas TaxID=286 RepID=A0A010TEI3_PSEFL"
+  },
+  {
+    "id": "UniRef50_A0A011V4L2",
+    "score": 0.9579269886016846,
+    "name": "cellulase",
+    "keywords": [
+      "Carbohydrate metabolism",
+      "Cellulose degradation",
+      "Glycosidase",
+      "Hydrolase",
+      "Polysaccharide degradation",
+      "Reference proteome",
+      "Signal"
+    ],
+    "header_desc": "cellulase n=22 Tax=Ruminococcus TaxID=1263 RepID=A0A011V4L2_RUMAL"
+  },
+  {
+    "id": "UniRef50_A0A011VYA4",
+    "score": 0.9565975069999695,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Uncharacterized protein n=1 Tax=Ruminococcus albus SY3 TaxID=1341156 RepID=A0A011VYA4_RUMAL"
+  },
+  {
+    "id": "UniRef50_A0A010ST61",
+    "score": 0.9559730291366577,
+    "name": "Uncharacterized protein",
+    "keywords": [],
+    "header_desc": "Uncharacterized protein n=1 Tax=Pseudomonas fluorescens HK44 TaxID=1042209 RepID=A0A010ST61_PSEFL"
+  },
+  {
+    "id": "UniRef50_A0A009HY30",
+    "score": 0.9549906253814697,
+    "name": "Uncharacterized protein",
+    "keywords": [],
+    "header_desc": "Uncharacterized protein (Fragment) n=1 Tax=Acinetobacter baumannii TaxID=1310613 RepID=A0A009HY30_ACIB9"
+  },
+  {
+    "id": "UniRef50_A0A009HPW9",
+    "score": 0.9541978240013123,
+    "name": "Uncharacterized protein",
+    "keywords": [],
+    "header_desc": "Uncharacterized protein n=33 Tax=Acinetobacter TaxID=469 RepID=A0A009HPW9_ACIB9"
+  },
+  {
+    "id": "UniRef50_A0A011NLQ3",
+    "score": 0.9538912177085876,
+    "name": "Uncharacterized protein",
+    "keywords": [],
+    "header_desc": "Uncharacterized protein n=1 Tax=Candidatus Accumulibacter appositus TaxID=1454003 RepID=A0A011NLQ3_9PROT"
+  },
+  {
+    "id": "UniRef50_A0A011PR17",
+    "score": 0.9535090923309326,
+    "name": "Ankyrin repeats (3 copies)",
+    "keywords": [
+      "ANK repeat",
+      "Signal"
+    ],
+    "header_desc": "Ankyrin repeats (3 copies) n=6 Tax=Candidatus Accumulibacter TaxID=327159 RepID=A0A011PR17_9PROT"
+  },
+  {
+    "id": "UniRef50_A0A011M7K2",
+    "score": 0.9530785083770752,
+    "name": "Ice-binding protein C-terminal domain-containing protein",
+    "keywords": [
+      "Reference proteome",
+      "Signal"
+    ],
+    "header_desc": "Ice-binding protein C-terminal domain-containing protein n=2 Tax=Candidatus Accumulibacter TaxID=327159 RepID=A0A011M7K2_9PROT"
+  },
+  {
+    "id": "UniRef50_A0A010RTB8",
+    "score": 0.9519968628883362,
+    "name": "Uncharacterized protein",
+    "keywords": [],
+    "header_desc": "Uncharacterized protein n=1 Tax=Pseudomonas fluorescens HK44 TaxID=1042209 RepID=A0A010RTB8_PSEFL"
+  },
+  {
+    "id": "UniRef50_A0A011NBR1",
+    "score": 0.9516157507896423,
+    "name": "Endonuclease",
+    "keywords": [
+      "Endonuclease",
+      "Hydrolase",
+      "Nuclease",
+      "Reference proteome"
+    ],
+    "header_desc": "Endonuclease n=1 Tax=Mannheimia granulomatis TaxID=85402 RepID=A0A011NBR1_9PAST"
+  },
+  {
+    "id": "UniRef50_A0A014KWB7",
+    "score": 0.9502587914466858,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Membrane",
+      "Transmembrane",
+      "Transmembrane helix"
+    ],
+    "header_desc": "Uncharacterized protein n=1 Tax=Mesomycoplasma ovipneumoniae 14811 TaxID=1188239 RepID=A0A014KWB7_9BACT"
+  },
+  {
+    "id": "UniRef50_A0A011PER9",
+    "score": 0.9493048191070557,
+    "name": "NIDO domain-containing protein",
+    "keywords": [
+      "Disulfide bond",
+      "Reference proteome",
+      "Signal"
+    ],
+    "header_desc": "NIDO domain-containing protein n=13 Tax=Bacteria TaxID=2 RepID=A0A011PER9_ACCRE"
+  },
+  {
+    "id": "UniRef50_A0A011VVG3",
+    "score": 0.9486306309700012,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Uncharacterized protein n=1 Tax=Ruminococcus albus SY3 TaxID=1341156 RepID=A0A011VVG3_RUMAL"
+  },
+  {
+    "id": "UniRef50_A0A011QKX7",
+    "score": 0.947963535785675,
+    "name": "TNase-like domain-containing protein",
+    "keywords": [
+      "Reference proteome",
+      "Signal"
+    ],
+    "header_desc": "TNase-like domain-containing protein n=11 Tax=Betaproteobacteria TaxID=28216 RepID=A0A011QKX7_ACCRE"
+  },
+  {
+    "id": "UniRef50_A0A010S1U7",
+    "score": 0.9478145241737366,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome",
+      "Signal"
+    ],
+    "header_desc": "Uncharacterized protein n=6 Tax=Colletotrichum acutatum species complex TaxID=2707335 RepID=A0A010S1U7_9PEZI"
+  },
+  {
+    "id": "UniRef50_A0A011ACS8",
+    "score": 0.9477986097335815,
+    "name": "Secreted protein",
+    "keywords": [
+      "Reference proteome",
+      "Signal"
+    ],
+    "header_desc": "Secreted protein n=3 Tax=Actinomycetes TaxID=1760 RepID=A0A011ACS8_9ACTN"
+  },
+  {
+    "id": "UniRef50_A0A011NFK2",
+    "score": 0.9467566013336182,
+    "name": "Uncharacterized protein",
+    "keywords": [],
+    "header_desc": "Uncharacterized protein n=1 Tax=Candidatus Accumulibacter appositus TaxID=1454003 RepID=A0A011NFK2_9PROT"
+  },
+  {
+    "id": "UniRef50_A0A009HJX5",
+    "score": 0.9455366134643555,
+    "name": "Lipolytic enzyme domain protein",
+    "keywords": [
+      "Signal"
+    ],
+    "header_desc": "Lipolytic enzyme domain protein n=2 Tax=Acinetobacter baumannii TaxID=470 RepID=A0A009HJX5_ACIB9"
+  },
+  {
+    "id": "UniRef50_A0A010RY03",
+    "score": 0.9447224140167236,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Uncharacterized protein n=1 Tax=Colletotrichum fioriniae PJ7 TaxID=1445577 RepID=A0A010RY03_9PEZI"
+  },
+  {
+    "id": "UniRef50_A0A010SRW7",
+    "score": 0.9446588158607483,
+    "name": "Uncharacterized protein",
+    "keywords": [],
+    "header_desc": "Uncharacterized protein n=1 Tax=Pseudomonas fluorescens HK44 TaxID=1042209 RepID=A0A010SRW7_PSEFL"
+  },
+  {
+    "id": "UniRef50_A0A011WN45",
+    "score": 0.9442313313484192,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Uncharacterized protein n=2 Tax=Ruminococcus TaxID=1263 RepID=A0A011WN45_RUMAL"
+  },
+  {
+    "id": "UniRef50_A0A011TIC7",
+    "score": 0.9429180026054382,
+    "name": "Uncharacterized protein",
+    "keywords": [],
+    "header_desc": "Uncharacterized protein n=3 Tax=Hyphomicrobiales TaxID=356 RepID=A0A011TIC7_9HYPH"
+  },
+  {
+    "id": "UniRef50_A0A010YJ97",
+    "score": 0.942855715751648,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Membrane",
+      "Reference proteome",
+      "Transmembrane",
+      "Transmembrane helix"
+    ],
+    "header_desc": "Uncharacterized protein n=2 Tax=Cryptosporangium TaxID=65502 RepID=A0A010YJ97_9ACTN"
+  },
+  {
+    "id": "UniRef50_A0A011UZJ5",
+    "score": 0.9426102042198181,
+    "name": "DUF4430 domain-containing protein",
+    "keywords": [
+      "Reference proteome",
+      "Signal"
+    ],
+    "header_desc": "DUF4430 domain-containing protein n=1 Tax=Ruminococcus albus SY3 TaxID=1341156 RepID=A0A011UZJ5_RUMAL"
+  },
+  {
+    "id": "UniRef50_A0A011WNK7",
+    "score": 0.9425832033157349,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Uncharacterized protein n=1 Tax=Ruminococcus albus SY3 TaxID=1341156 RepID=A0A011WNK7_RUMAL"
+  },
+  {
+    "id": "UniRef50_A0A011Q7L1",
+    "score": 0.9419041872024536,
+    "name": "Lipoprotein",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Lipoprotein n=9 Tax=Betaproteobacteria TaxID=28216 RepID=A0A011Q7L1_ACCRE"
+  },
+  {
+    "id": "UniRef50_A0A010QGY7",
+    "score": 0.9418654441833496,
+    "name": "Peptidase",
+    "keywords": [
+      "Hydrolase",
+      "Protease",
+      "Reference proteome",
+      "Serine protease",
+      "Signal"
+    ],
+    "header_desc": "Peptidase n=19 Tax=Sordariomycetes TaxID=147550 RepID=A0A010QGY7_9PEZI"
+  },
+  {
+    "id": "UniRef50_A0A011UWM6",
+    "score": 0.9418171644210815,
+    "name": "Uncharacterized protein",
+    "keywords": [],
+    "header_desc": "Uncharacterized protein n=1 Tax=Aquamicrobium defluvii TaxID=69279 RepID=A0A011UWM6_9HYPH"
+  },
+  {
+    "id": "UniRef50_A0A009SUQ3",
+    "score": 0.9410296082496643,
+    "name": "Uncharacterized protein",
+    "keywords": [],
+    "header_desc": "Uncharacterized protein n=1 Tax=Acinetobacter baumannii 99063 TaxID=1310630 RepID=A0A009SUQ3_ACIBA"
+  },
+  {
+    "id": "UniRef50_A0A011MSQ1",
+    "score": 0.9409654140472412,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Uncharacterized protein n=1 Tax=Candidatus Accumulibacter adjunctus TaxID=1454001 RepID=A0A011MSQ1_9PROT"
+  },
+  {
+    "id": "UniRef50_A0A010QXX4",
+    "score": 0.9409414529800415,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Uncharacterized protein n=1 Tax=Colletotrichum fioriniae PJ7 TaxID=1445577 RepID=A0A010QXX4_9PEZI"
+  },
+  {
+    "id": "UniRef50_A0A009Q7E2",
+    "score": 0.9406253695487976,
+    "name": "Uncharacterized protein",
+    "keywords": [],
+    "header_desc": "Uncharacterized protein n=5 Tax=Acinetobacter TaxID=469 RepID=A0A009Q7E2_ACIBA"
+  },
+  {
+    "id": "UniRef50_A0A011RGB5",
+    "score": 0.9401639103889465,
+    "name": "Transglutaminase-like superfamily protein",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Transglutaminase-like superfamily protein n=9 Tax=Pseudomonadota TaxID=1224 RepID=A0A011RGB5_ACCRE"
+  },
+  {
+    "id": "UniRef50_A0A011VWZ5",
+    "score": 0.9391111135482788,
+    "name": "Lipoprotein",
+    "keywords": [
+      "Reference proteome",
+      "Signal"
+    ],
+    "header_desc": "Lipoprotein n=7 Tax=Ruminococcus TaxID=1263 RepID=A0A011VWZ5_RUMAL"
+  },
+  {
+    "id": "UniRef50_A0A011PID1",
+    "score": 0.938435971736908,
+    "name": "diguanylate cyclase",
+    "keywords": [
+      "Membrane",
+      "Reference proteome",
+      "Transmembrane",
+      "Transmembrane helix"
+    ],
+    "header_desc": "diguanylate cyclase n=26 Tax=Betaproteobacteria TaxID=28216 RepID=A0A011PID1_9PROT"
+  },
+  {
+    "id": "UniRef50_A0A011UDL0",
+    "score": 0.9382869601249695,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Uncharacterized protein n=1 Tax=Aquamicrobium defluvii TaxID=69279 RepID=A0A011UDL0_9HYPH"
+  },
+  {
+    "id": "UniRef50_A0A010SJB2",
+    "score": 0.9378529787063599,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Uncharacterized protein n=3 Tax=Hypocreomycetidae TaxID=222543 RepID=A0A010SJB2_9PEZI"
+  },
+  {
+    "id": "UniRef50_A0A010S7F6",
+    "score": 0.9370840787887573,
+    "name": "Uncharacterized protein",
+    "keywords": [],
+    "header_desc": "Uncharacterized protein n=1 Tax=Pseudomonas fluorescens HK44 TaxID=1042209 RepID=A0A010S7F6_PSEFL"
+  },
+  {
+    "id": "UniRef50_A0A011U772",
+    "score": 0.9366569519042969,
+    "name": "Nuclease",
+    "keywords": [
+      "Endonuclease",
+      "Hydrolase",
+      "Membrane",
+      "Nuclease",
+      "Reference proteome",
+      "Transmembrane",
+      "Transmembrane helix"
+    ],
+    "header_desc": "Nuclease n=1 Tax=Aquamicrobium defluvii TaxID=69279 RepID=A0A011U772_9HYPH"
+  },
+  {
+    "id": "UniRef50_A0A010ZTK3",
+    "score": 0.9362645149230957,
+    "name": "DUF5129 domain-containing protein",
+    "keywords": [
+      "Membrane",
+      "Reference proteome",
+      "Signal",
+      "Transmembrane",
+      "Transmembrane helix"
+    ],
+    "header_desc": "DUF5129 domain-containing protein n=1 Tax=Cryptosporangium arvum DSM 44712 TaxID=927661 RepID=A0A010ZTK3_9ACTN"
+  },
+  {
+    "id": "UniRef50_A0A011PYH4",
+    "score": 0.9359091520309448,
+    "name": "TIR domain-containing protein",
+    "keywords": [],
+    "header_desc": "TIR domain-containing protein n=1 Tax=Candidatus Accumulibacter appositus TaxID=1454003 RepID=A0A011PYH4_9PROT"
+  },
+  {
+    "id": "UniRef50_A0A011P939",
+    "score": 0.9347973465919495,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Uncharacterized protein n=1 Tax=Mannheimia granulomatis TaxID=85402 RepID=A0A011P939_9PAST"
+  },
+  {
+    "id": "UniRef50_A0A010SG53",
+    "score": 0.9340410828590393,
+    "name": "Teneurin-like YD-shell domain-containing protein",
+    "keywords": [
+      "Repeat"
+    ],
+    "header_desc": "Teneurin-like YD-shell domain-containing protein n=9 Tax=Pseudomonas TaxID=286 RepID=A0A010SG53_PSEFL"
+  },
+  {
+    "id": "UniRef50_A0A011NVV4",
+    "score": 0.9332575798034668,
+    "name": "Cytochrome c",
+    "keywords": [
+      "Electron transport",
+      "Heme",
+      "Iron",
+      "Metal-binding",
+      "Reference proteome",
+      "Signal",
+      "Transport"
+    ],
+    "header_desc": "Cytochrome c n=63 Tax=Pseudomonadota TaxID=1224 RepID=A0A011NVV4_9PROT"
+  },
+  {
+    "id": "UniRef50_A0A011PK24",
+    "score": 0.9331989884376526,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Coiled coil",
+      "Membrane",
+      "Reference proteome",
+      "Transmembrane",
+      "Transmembrane helix"
+    ],
+    "header_desc": "Uncharacterized protein n=1 Tax=Candidatus Accumulibacter adjunctus TaxID=1454001 RepID=A0A011PK24_9PROT"
+  },
+  {
+    "id": "UniRef50_A0A011N2A5",
+    "score": 0.9328261613845825,
+    "name": "PEP-CTERM motif protein",
+    "keywords": [
+      "Reference proteome",
+      "Signal"
+    ],
+    "header_desc": "PEP-CTERM motif protein n=1 Tax=Candidatus Accumulibacter adjunctus TaxID=1454001 RepID=A0A011N2A5_9PROT"
+  },
+  {
+    "id": "UniRef50_A0A009R6J0",
+    "score": 0.931899905204773,
+    "name": "Transposase",
+    "keywords": [],
+    "header_desc": "Transposase n=1 Tax=Acinetobacter baumannii 99063 TaxID=1310630 RepID=A0A009R6J0_ACIBA"
+  },
+  {
+    "id": "UniRef50_A0A011W031",
+    "score": 0.9310077428817749,
+    "name": "Cell wall hydrolase",
+    "keywords": [
+      "Reference proteome",
+      "Signal"
+    ],
+    "header_desc": "Cell wall hydrolase n=7 Tax=Ruminococcus TaxID=1263 RepID=A0A011W031_RUMAL"
+  },
+  {
+    "id": "UniRef50_A0A011VM22",
+    "score": 0.9289280772209167,
+    "name": "Virulence protein E",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Virulence protein E n=12 Tax=Alphaproteobacteria TaxID=28211 RepID=A0A011VM22_9HYPH"
+  },
+  {
+    "id": "UniRef50_A0A010RZM2",
+    "score": 0.928715705871582,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Membrane",
+      "Transmembrane",
+      "Transmembrane helix"
+    ],
+    "header_desc": "Uncharacterized protein n=1 Tax=Pseudomonas fluorescens HK44 TaxID=1042209 RepID=A0A010RZM2_PSEFL"
+  },
+  {
+    "id": "UniRef50_A0A014LYW2",
+    "score": 0.9283981323242188,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Uncharacterized protein n=1 Tax=Erwinia mallotivora TaxID=69222 RepID=A0A014LYW2_9GAMM"
+  },
+  {
+    "id": "UniRef50_A0A010T9W2",
+    "score": 0.9280009269714355,
+    "name": "Uncharacterized protein",
+    "keywords": [],
+    "header_desc": "Uncharacterized protein n=1 Tax=Pseudomonas fluorescens HK44 TaxID=1042209 RepID=A0A010T9W2_PSEFL"
+  },
+  {
+    "id": "UniRef50_A0A010RD71",
+    "score": 0.9273533821105957,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Uncharacterized protein n=3 Tax=Colletotrichum acutatum species complex TaxID=2707335 RepID=A0A010RD71_9PEZI"
+  },
+  {
+    "id": "UniRef50_A0A010TGQ6",
+    "score": 0.9262307286262512,
+    "name": "Uncharacterized protein",
+    "keywords": [],
+    "header_desc": "Uncharacterized protein n=2 Tax=Pseudomonas TaxID=286 RepID=A0A010TGQ6_PSEFL"
+  },
+  {
+    "id": "UniRef50_A0A010ZQI0",
+    "score": 0.9255765676498413,
+    "name": "Type I restriction enzyme R protein N-terminal domain-containing protein",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Type I restriction enzyme R protein N-terminal domain-containing protein n=1 Tax=Cryptosporangium arvum DSM 44712 TaxID=927661 RepID=A0A010ZQI0_9ACTN"
+  },
+  {
+    "id": "UniRef50_A0A011UZ54",
+    "score": 0.9253941178321838,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Uncharacterized protein n=1 Tax=Ruminococcus albus SY3 TaxID=1341156 RepID=A0A011UZ54_RUMAL"
+  },
+  {
+    "id": "UniRef50_A0A010RU23",
+    "score": 0.925204873085022,
+    "name": "Uncharacterized protein",
+    "keywords": [],
+    "header_desc": "Uncharacterized protein n=10 Tax=Pseudomonas TaxID=286 RepID=A0A010RU23_PSEFL"
+  },
+  {
+    "id": "UniRef50_A0A011NGX7",
+    "score": 0.9251729846000671,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Membrane",
+      "Transmembrane",
+      "Transmembrane helix"
+    ],
+    "header_desc": "Uncharacterized protein n=1 Tax=Candidatus Accumulibacter appositus TaxID=1454003 RepID=A0A011NGX7_9PROT"
+  },
+  {
+    "id": "UniRef50_A0A014LWP9",
+    "score": 0.9239712953567505,
+    "name": "Toxin",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Toxin n=3 Tax=Erwinia TaxID=551 RepID=A0A014LWP9_9GAMM"
+  },
+  {
+    "id": "UniRef50_A0A010RUG7",
+    "score": 0.9223893284797668,
+    "name": "histidine kinase",
+    "keywords": [
+      "Kinase",
+      "Membrane",
+      "Phosphoprotein",
+      "Transferase",
+      "Transmembrane",
+      "Transmembrane helix"
+    ],
+    "header_desc": "histidine kinase n=6 Tax=Pseudomonas TaxID=286 RepID=A0A010RUG7_PSEFL"
+  },
+  {
+    "id": "UniRef50_A0A009RUX8",
+    "score": 0.9205028414726257,
+    "name": "Putative transposase subunit",
+    "keywords": [],
+    "header_desc": "Putative transposase subunit n=1 Tax=Acinetobacter baumannii 99063 TaxID=1310630 RepID=A0A009RUX8_ACIBA"
+  },
+  {
+    "id": "UniRef50_A0A011NLF3",
+    "score": 0.9204393625259399,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Uncharacterized protein n=1 Tax=Candidatus Accumulibacter adjunctus TaxID=1454001 RepID=A0A011NLF3_9PROT"
+  },
+  {
+    "id": "UniRef50_A0A010YNQ0",
+    "score": 0.9203848838806152,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Membrane",
+      "Reference proteome",
+      "Transmembrane",
+      "Transmembrane helix"
+    ],
+    "header_desc": "Uncharacterized protein n=3 Tax=Cryptosporangium TaxID=65502 RepID=A0A010YNQ0_9ACTN"
+  },
+  {
+    "id": "UniRef50_A0A011QCD8",
+    "score": 0.9203048348426819,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Membrane",
+      "Reference proteome",
+      "Transmembrane",
+      "Transmembrane helix"
+    ],
+    "header_desc": "Uncharacterized protein n=1 Tax=Accumulibacter regalis TaxID=522306 RepID=A0A011QCD8_ACCRE"
+  },
+  {
+    "id": "UniRef50_A0A011WNJ2",
+    "score": 0.9196290373802185,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Uncharacterized protein n=1 Tax=Ruminococcus albus SY3 TaxID=1341156 RepID=A0A011WNJ2_RUMAL"
+  },
+  {
+    "id": "UniRef50_A0A010YID5",
+    "score": 0.9170346856117249,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Uncharacterized protein n=1 Tax=Cryptosporangium arvum DSM 44712 TaxID=927661 RepID=A0A010YID5_9ACTN"
+  },
+  {
+    "id": "UniRef50_A0A011NPP1",
+    "score": 0.9170092344284058,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Uncharacterized protein n=1 Tax=Candidatus Accumulibacter adjunctus TaxID=1454001 RepID=A0A011NPP1_9PROT"
+  },
+  {
+    "id": "UniRef50_A0A011QE15",
+    "score": 0.9165286421775818,
+    "name": "Ferric iron ABC transporter, iron-binding protein",
+    "keywords": [
+      "Signal"
+    ],
+    "header_desc": "Ferric iron ABC transporter, iron-binding protein n=4 Tax=Betaproteobacteria TaxID=28216 RepID=A0A011QE15_9PROT"
+  },
+  {
+    "id": "UniRef50_A0A010SKZ8",
+    "score": 0.9132575988769531,
+    "name": "Lipopeptide",
+    "keywords": [
+      "Cell outer membrane",
+      "Lipoprotein",
+      "Membrane",
+      "Palmitate",
+      "Signal"
+    ],
+    "header_desc": "Lipopeptide n=295 Tax=Gammaproteobacteria TaxID=1236 RepID=A0A010SKZ8_PSEFL"
+  },
+  {
+    "id": "UniRef50_A0A011UHV8",
+    "score": 0.9111213684082031,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Uncharacterized protein n=2 Tax=Ruminococcus TaxID=1263 RepID=A0A011UHV8_RUMAL"
+  },
+  {
+    "id": "UniRef50_A0A011WNI0",
+    "score": 0.9105561971664429,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Membrane",
+      "Reference proteome",
+      "Transmembrane",
+      "Transmembrane helix"
+    ],
+    "header_desc": "Uncharacterized protein n=1 Tax=Ruminococcus albus SY3 TaxID=1341156 RepID=A0A011WNI0_RUMAL"
+  },
+  {
+    "id": "UniRef50_A0A011PCX1",
+    "score": 0.9102778434753418,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Uncharacterized protein n=1 Tax=Candidatus Accumulibacter adjunctus TaxID=1454001 RepID=A0A011PCX1_9PROT"
+  },
+  {
+    "id": "UniRef50_A0A011N459",
+    "score": 0.9092208743095398,
+    "name": "Uncharacterized protein",
+    "keywords": [],
+    "header_desc": "Uncharacterized protein n=1 Tax=Candidatus Accumulibacter appositus TaxID=1454003 RepID=A0A011N459_9PROT"
+  },
+  {
+    "id": "UniRef50_A0A010S5B7",
+    "score": 0.9090090394020081,
+    "name": "endo-1,3(4)-beta-glucanase",
+    "keywords": [
+      "Glycosidase",
+      "Hydrolase",
+      "Reference proteome"
+    ],
+    "header_desc": "endo-1,3(4)-beta-glucanase n=1 Tax=Colletotrichum fioriniae PJ7 TaxID=1445577 RepID=A0A010S5B7_9PEZI"
+  },
+  {
+    "id": "UniRef50_A0A011A0M3",
+    "score": 0.9088767766952515,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Uncharacterized protein n=2 Tax=Saccharibacillus TaxID=456492 RepID=A0A011A0M3_9BACL"
+  },
+  {
+    "id": "UniRef50_A0A009TJ02",
+    "score": 0.9070371389389038,
+    "name": "NACHT domain protein",
+    "keywords": [],
+    "header_desc": "NACHT domain protein n=12 Tax=Gammaproteobacteria TaxID=1236 RepID=A0A009TJ02_ACIBA"
+  },
+  {
+    "id": "UniRef50_A0A011P698",
+    "score": 0.9064937829971313,
+    "name": "Uncharacterized protein",
+    "keywords": [],
+    "header_desc": "Uncharacterized protein n=1 Tax=Candidatus Accumulibacter appositus TaxID=1454003 RepID=A0A011P698_9PROT"
+  },
+  {
+    "id": "UniRef50_A0A011NFY6",
+    "score": 0.9064828753471375,
+    "name": "Uncharacterized protein",
+    "keywords": [],
+    "header_desc": "Uncharacterized protein n=1 Tax=Candidatus Accumulibacter appositus TaxID=1454003 RepID=A0A011NFY6_9PROT"
+  },
+  {
+    "id": "UniRef50_A0A010RDY2",
+    "score": 0.9039697647094727,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Uncharacterized protein n=1 Tax=Colletotrichum fioriniae PJ7 TaxID=1445577 RepID=A0A010RDY2_9PEZI"
+  },
+  {
+    "id": "UniRef50_A0A011PQ84",
+    "score": 0.9033911228179932,
+    "name": "TonB C-terminal domain-containing protein",
+    "keywords": [
+      "Cell inner membrane",
+      "Cell membrane",
+      "Membrane",
+      "Protein transport",
+      "Transmembrane",
+      "Transmembrane helix",
+      "Transport"
+    ],
+    "header_desc": "TonB C-terminal domain-containing protein n=26 Tax=Betaproteobacteria TaxID=28216 RepID=A0A011PQ84_9PROT"
+  },
+  {
+    "id": "UniRef50_A0A011NCJ8",
+    "score": 0.902378499507904,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Uncharacterized protein n=1 Tax=Mannheimia granulomatis TaxID=85402 RepID=A0A011NCJ8_9PAST"
+  },
+  {
+    "id": "UniRef50_A0A011W0E7",
+    "score": 0.902341902256012,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome",
+      "Repeat",
+      "TPR repeat"
+    ],
+    "header_desc": "Uncharacterized protein n=2 Tax=Ruminococcus albus TaxID=1264 RepID=A0A011W0E7_RUMAL"
+  },
+  {
+    "id": "UniRef50_A0A011VME8",
+    "score": 0.900043785572052,
+    "name": "Phage P22-like portal protein",
+    "keywords": [
+      "Coiled coil"
+    ],
+    "header_desc": "Phage P22-like portal protein n=16 Tax=Alphaproteobacteria TaxID=28211 RepID=A0A011VME8_9HYPH"
+  },
+  {
+    "id": "UniRef50_A0A011UHQ4",
+    "score": 0.8995749950408936,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Membrane",
+      "Reference proteome",
+      "Transmembrane",
+      "Transmembrane helix"
+    ],
+    "header_desc": "Uncharacterized protein n=2 Tax=Ruminococcus albus TaxID=1264 RepID=A0A011UHQ4_RUMAL"
+  },
+  {
+    "id": "UniRef50_A0A011T049",
+    "score": 0.8977788090705872,
+    "name": "Oxidoreductase molybdopterin-binding domain-containing protein",
+    "keywords": [
+      "Signal"
+    ],
+    "header_desc": "Oxidoreductase molybdopterin-binding domain-containing protein n=85 Tax=Phyllobacteriaceae TaxID=69277 RepID=A0A011T049_9HYPH"
+  },
+  {
+    "id": "UniRef50_A0A009PK94",
+    "score": 0.8942427635192871,
+    "name": "Putative membrane protein",
+    "keywords": [
+      "Membrane",
+      "Transmembrane",
+      "Transmembrane helix"
+    ],
+    "header_desc": "Putative membrane protein n=4 Tax=Acinetobacter baumannii TaxID=470 RepID=A0A009PK94_ACIBA"
+  },
+  {
+    "id": "UniRef50_A0A009SAS1",
+    "score": 0.8938892483711243,
+    "name": "UvrABC system protein A",
+    "keywords": [
+      "ATP-binding",
+      "Cytoplasm",
+      "DNA damage",
+      "DNA excision",
+      "DNA repair",
+      "DNA-binding",
+      "Excision nuclease",
+      "Helicase",
+      "Hydrolase",
+      "Nucleotide-binding",
+      "Repeat"
+    ],
+    "header_desc": "UvrABC system protein A n=2 Tax=Pseudomonadati TaxID=3379134 RepID=A0A009SAS1_ACIBA"
+  },
+  {
+    "id": "UniRef50_A0A011PVS5",
+    "score": 0.8907251358032227,
+    "name": "Uncharacterized protein",
+    "keywords": [],
+    "header_desc": "Uncharacterized protein n=1 Tax=Candidatus Accumulibacter appositus TaxID=1454003 RepID=A0A011PVS5_9PROT"
+  },
+  {
+    "id": "UniRef50_A0A011MDS5",
+    "score": 0.8890659213066101,
+    "name": "Baseplate assembly protein",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Baseplate assembly protein n=25 Tax=Bacteria TaxID=2 RepID=A0A011MDS5_9PROT"
+  },
+  {
+    "id": "UniRef50_A0A009I5D6",
+    "score": 0.8876703381538391,
+    "name": "Bacteriophage protein",
+    "keywords": [
+      "Membrane",
+      "Transmembrane",
+      "Transmembrane helix"
+    ],
+    "header_desc": "Bacteriophage protein n=9 Tax=Bacteria TaxID=2 RepID=A0A009I5D6_ACIB9"
+  },
+  {
+    "id": "UniRef50_A0A011UZD9",
+    "score": 0.8866657614707947,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Uncharacterized protein n=1 Tax=Ruminococcus albus SY3 TaxID=1341156 RepID=A0A011UZD9_RUMAL"
+  },
+  {
+    "id": "UniRef50_A0A011UHW1",
+    "score": 0.8866300582885742,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Membrane",
+      "Reference proteome",
+      "Transmembrane",
+      "Transmembrane helix"
+    ],
+    "header_desc": "Uncharacterized protein n=1 Tax=Ruminococcus albus SY3 TaxID=1341156 RepID=A0A011UHW1_RUMAL"
+  },
+  {
+    "id": "UniRef50_A0A011QN87",
+    "score": 0.883934736251831,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Uncharacterized protein n=3 Tax=Candidatus Accumulibacter TaxID=327159 RepID=A0A011QN87_ACCRE"
+  },
+  {
+    "id": "UniRef50_A0A011AFV2",
+    "score": 0.8822939395904541,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Uncharacterized protein n=2 Tax=Cryptosporangium TaxID=65502 RepID=A0A011AFV2_9ACTN"
+  },
+  {
+    "id": "UniRef50_A0A009RX63",
+    "score": 0.8801190257072449,
+    "name": "KTSC domain protein",
+    "keywords": [],
+    "header_desc": "KTSC domain protein n=9 Tax=Acinetobacter TaxID=469 RepID=A0A009RX63_ACIBA"
+  },
+  {
+    "id": "UniRef50_A0A011UFP2",
+    "score": 0.8800304532051086,
+    "name": "Uncharacterized protein",
+    "keywords": [],
+    "header_desc": "Uncharacterized protein n=7 Tax=Hyphomicrobiales TaxID=356 RepID=A0A011UFP2_9HYPH"
+  },
+  {
+    "id": "UniRef50_A0A011R8B1",
+    "score": 0.8785702586174011,
+    "name": "asparagine synthase (glutamine-hydrolyzing)",
+    "keywords": [
+      "Amino-acid biosynthesis",
+      "Asparagine biosynthesis",
+      "ATP-binding",
+      "Glutamine amidotransferase",
+      "Ligase",
+      "Nucleotide-binding",
+      "Reference proteome"
+    ],
+    "header_desc": "asparagine synthase (glutamine-hydrolyzing) n=3 Tax=Pseudomonadota TaxID=1224 RepID=A0A011R8B1_ACCRE"
+  },
+  {
+    "id": "UniRef50_A0A011PNQ2",
+    "score": 0.8776687383651733,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Uncharacterized protein n=1 Tax=Candidatus Accumulibacter adjunctus TaxID=1454001 RepID=A0A011PNQ2_9PROT"
+  },
+  {
+    "id": "UniRef50_A0A011PBH5",
+    "score": 0.8759150505065918,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Uncharacterized protein n=1 Tax=Candidatus Accumulibacter adjunctus TaxID=1454001 RepID=A0A011PBH5_9PROT"
+  },
+  {
+    "id": "UniRef50_A0A011UZC4",
+    "score": 0.8756096959114075,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Uncharacterized protein n=1 Tax=Ruminococcus albus SY3 TaxID=1341156 RepID=A0A011UZC4_RUMAL"
+  },
+  {
+    "id": "UniRef50_A0A011UJS8",
+    "score": 0.8743137717247009,
+    "name": "Fibronectin type-III domain-containing protein",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Fibronectin type-III domain-containing protein n=1 Tax=Ruminococcus albus SY3 TaxID=1341156 RepID=A0A011UJS8_RUMAL"
+  },
+  {
+    "id": "UniRef50_A0A011PRF8",
+    "score": 0.8740977644920349,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Uncharacterized protein n=1 Tax=Accumulibacter regalis TaxID=522306 RepID=A0A011PRF8_ACCRE"
+  },
+  {
+    "id": "UniRef50_A0A010SPS5",
+    "score": 0.8736245036125183,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Signal"
+    ],
+    "header_desc": "Uncharacterized protein n=5 Tax=Pseudomonas TaxID=286 RepID=A0A010SPS5_PSEFL"
+  },
+  {
+    "id": "UniRef50_A0A011PSF9",
+    "score": 0.8732181787490845,
+    "name": "Uncharacterized protein",
+    "keywords": [],
+    "header_desc": "Uncharacterized protein n=1 Tax=Candidatus Accumulibacter appositus TaxID=1454003 RepID=A0A011PSF9_9PROT"
+  },
+  {
+    "id": "UniRef50_A0A010RNM1",
+    "score": 0.8729965090751648,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Uncharacterized protein n=1 Tax=Colletotrichum fioriniae PJ7 TaxID=1445577 RepID=A0A010RNM1_9PEZI"
+  },
+  {
+    "id": "UniRef50_A0A011QE14",
+    "score": 0.8723335266113281,
+    "name": "Dimethyladenosine transferase",
+    "keywords": [
+      "Reference proteome",
+      "S-adenosyl-L-methionine",
+      "Transferase"
+    ],
+    "header_desc": "Dimethyladenosine transferase n=2 Tax=Betaproteobacteria TaxID=28216 RepID=A0A011QE14_ACCRE"
+  },
+  {
+    "id": "UniRef50_A0A011QIG5",
+    "score": 0.871976375579834,
+    "name": "Histone deacetylase-like amidohydrolase",
+    "keywords": [
+      "Hydrolase"
+    ],
+    "header_desc": "Histone deacetylase-like amidohydrolase n=48 Tax=Pseudomonadati TaxID=3379134 RepID=A0A011QIG5_9PROT"
+  },
+  {
+    "id": "UniRef50_A0A011Q8Q8",
+    "score": 0.870744526386261,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Uncharacterized protein n=1 Tax=Accumulibacter regalis TaxID=522306 RepID=A0A011Q8Q8_ACCRE"
+  },
+  {
+    "id": "UniRef50_A0A011VY52",
+    "score": 0.8698689937591553,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Uncharacterized protein n=1 Tax=Ruminococcus albus SY3 TaxID=1341156 RepID=A0A011VY52_RUMAL"
+  },
+  {
+    "id": "UniRef50_A0A010RVP0",
+    "score": 0.869806706905365,
+    "name": "Uncharacterized protein",
+    "keywords": [],
+    "header_desc": "Uncharacterized protein n=2 Tax=Pseudomonas TaxID=286 RepID=A0A010RVP0_PSEFL"
+  },
+  {
+    "id": "UniRef50_A0A011UW02",
+    "score": 0.8676139712333679,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Uncharacterized protein n=12 Tax=Hyphomicrobiales TaxID=356 RepID=A0A011UW02_9HYPH"
+  },
+  {
+    "id": "UniRef50_A0A011UWI6",
+    "score": 0.8660306334495544,
+    "name": "Restriction endonuclease subunit S",
+    "keywords": [
+      "DNA-binding",
+      "Endonuclease",
+      "Hydrolase",
+      "Nuclease",
+      "Reference proteome",
+      "Restriction system"
+    ],
+    "header_desc": "Restriction endonuclease subunit S n=13 Tax=Bacteria TaxID=2 RepID=A0A011UWI6_RUMAL"
+  },
+  {
+    "id": "UniRef50_A0A011N324",
+    "score": 0.8630714416503906,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Uncharacterized protein n=2 Tax=Candidatus Accumulibacter TaxID=327159 RepID=A0A011N324_9PROT"
+  },
+  {
+    "id": "UniRef50_A0A010QQS4",
+    "score": 0.8621745109558105,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Uncharacterized protein n=12 Tax=Colletotrichum acutatum species complex TaxID=2707335 RepID=A0A010QQS4_9PEZI"
+  },
+  {
+    "id": "UniRef50_A0A010QLD5",
+    "score": 0.8600423336029053,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Membrane",
+      "Reference proteome",
+      "Transmembrane",
+      "Transmembrane helix"
+    ],
+    "header_desc": "Uncharacterized protein n=12 Tax=Colletotrichum acutatum species complex TaxID=2707335 RepID=A0A010QLD5_9PEZI"
+  },
+  {
+    "id": "UniRef50_A0A011UWF6",
+    "score": 0.8592672944068909,
+    "name": "Pilus assembly protein CpaC",
+    "keywords": [
+      "Reference proteome",
+      "Signal"
+    ],
+    "header_desc": "Pilus assembly protein CpaC n=890 Tax=Bacteria TaxID=2 RepID=A0A011UWF6_9HYPH"
+  },
+  {
+    "id": "UniRef50_A0A011NE48",
+    "score": 0.858375608921051,
+    "name": "DUF748 domain-containing protein",
+    "keywords": [
+      "Membrane",
+      "Transmembrane",
+      "Transmembrane helix"
+    ],
+    "header_desc": "DUF748 domain-containing protein n=19 Tax=Betaproteobacteria TaxID=28216 RepID=A0A011NE48_9PROT"
+  },
+  {
+    "id": "UniRef50_A0A011NW84",
+    "score": 0.8572128415107727,
+    "name": "Lipoprotein",
+    "keywords": [
+      "Reference proteome"
+    ],
+    "header_desc": "Lipoprotein n=10 Tax=Candidatus Accumulibacter TaxID=327159 RepID=A0A011NW84_9PROT"
+  },
+  {
+    "id": "UniRef50_A0A011P0H3",
+    "score": 0.8559901714324951,
+    "name": "Uncharacterized protein",
+    "keywords": [],
+    "header_desc": "Uncharacterized protein n=1 Tax=Candidatus Accumulibacter appositus TaxID=1454003 RepID=A0A011P0H3_9PROT"
+  },
+  {
+    "id": "UniRef50_A0A011N7V1",
+    "score": 0.8557278513908386,
+    "name": "Cytoplasmic glycerophosphodiester phosphodiesterase",
+    "keywords": [],
+    "header_desc": "Cytoplasmic glycerophosphodiester phosphodiesterase n=1 Tax=Candidatus Accumulibacter appositus TaxID=1454003 RepID=A0A011N7V1_9PROT"
+  },
+  {
+    "id": "UniRef50_A0A010RVJ0",
+    "score": 0.8554141521453857,
+    "name": "Uncharacterized protein",
+    "keywords": [],
+    "header_desc": "Uncharacterized protein n=1 Tax=Pseudomonas fluorescens HK44 TaxID=1042209 RepID=A0A010RVJ0_PSEFL"
+  },
+  {
+    "id": "UniRef50_A0A011P653",
+    "score": 0.8524067401885986,
+    "name": "Uncharacterized protein",
+    "keywords": [],
+    "header_desc": "Uncharacterized protein n=2 Tax=Candidatus Accumulibacter TaxID=327159 RepID=A0A011P653_9PROT"
+  },
+  {
+    "id": "UniRef50_A0A010QBM1",
+    "score": 0.85099196434021,
+    "name": "Uncharacterized protein",
+    "keywords": [
+      "Reference proteome",
+      "Signal"
+    ],
+    "header_desc": "Uncharacterized protein n=1 Tax=Colletotrichum fioriniae PJ7 TaxID=1445577 RepID=A0A010QBM1_9PEZI"
+  },
+  {
+    "id": "UniRef50_A0A011VVD9",
+    "score": 0.8509105443954468,
+    "name": "ATP-dependent DNA ligase family profile domain-containing protein",
+    "keywords": [
+      "Ligase",
+      "Reference proteome"
+    ],
+    "header_desc": "ATP-dependent DNA ligase family profile domain-containing protein n=1 Tax=Ruminococcus albus SY3 TaxID=1341156 RepID=A0A011VVD9_RUMAL"
+  }
+]
