@@ -469,19 +469,24 @@ support this:
 \end{enumerate}
 
 \noindent\textbf{Deployment consideration.} A 248/1,000 (24.8\%) flag rate at the 0.85
-threshold is too high for automated rejection in a synthesis-screening pipeline. However,
-the threshold is tunable: raising it to 0.95 reduces flags to 12.4\% while retaining all
-confirmed virulence hits (Hemolysin, Leukotoxin, Ecp2, both \textit{A.\ baumannii}
-proteins). Moreover, the 4.75$\times$ signal peptide enrichment demonstrates that
-the majority of flags are functionally meaningful secreted proteins rather than noise,
-making them appropriate candidates for secondary review rather than false positives
-to be discarded. Critically, \textbf{135 of the 248 candidates (54.4\%)} are currently
-annotated as ``Uncharacterized protein'' in UniProt, representing potential novel virulence
+threshold is too high for automated rejection in a synthesis-screening pipeline.
+Raising the threshold from 0.850 to 0.950 reduces flags from 248 to 135 (46\%
+reduction) while retaining 8 of 11 confirmed virulence hits (73\%). The three
+lost hits (Virulence protein E at 0.929, Toxin at 0.924, Pilus assembly CpaC
+at 0.859) suggest the probe assigns lower confidence to virulence factors acting
+through assembly machinery and host-interaction domains rather than direct
+cytotoxicity---a systematic blind spot addressable by training on a broader
+virulence ontology beyond toxin annotations. The 4.75$\times$ signal peptide
+enrichment demonstrates that the majority of flags are functionally meaningful
+secreted proteins rather than noise, making them appropriate candidates for
+secondary review rather than false positives to be discarded. Critically,
+\textbf{135 of the 248 candidates (54.4\%)} are currently annotated as
+``Uncharacterized protein'' in UniProt, representing potential novel virulence
 factors that existing annotation pipelines have not identified. One such protein
-(A0A009QBX0, score 0.9993) was independently confirmed via AlphaFold structural homology
-as a GDSL-like Lipase/Acylhydrolase---a known class of secreted membrane-degrading
-virulence factors---illustrating the probe's capacity for functional
-discovery ahead of conventional annotation.
+(A0A009QBX0, score 0.9993) was independently confirmed via AlphaFold structural
+homology as a GDSL-like Lipase/Acylhydrolase---a known class of secreted
+membrane-degrading virulence factors---illustrating the probe's capacity for
+functional discovery ahead of conventional annotation.
 
 \begin{figure}[H]
 \centering
