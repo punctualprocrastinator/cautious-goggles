@@ -40,10 +40,9 @@ def load_model(model_id='facebook/esm2_t33_650M_UR50D', probe_path='results/prob
     esm2 = EsmForMaskedLM.from_pretrained(model_id).to(DEVICE).eval()
     
     if not Path(probe_path).exists():
-        print(f"Error: Probe weights not found at {probe_path}", file=sys.stderr)
-        sys.exit(1)
+        raise FileNotFoundError(f"Probe weights not found at {probe_path}")
         
-    w = np.load(probe_path)
+    w = np.load(probe_path).squeeze() # ensure 1D
     # Reconstruct linear probe from saved direction
     probe = nn.Linear(1280, 1, bias=False)
     probe.weight.data = torch.tensor(w, dtype=torch.float32).unsqueeze(0)
@@ -78,9 +77,9 @@ def risk_level(score):
         if score >= thr: return level
     return 'SAFE'
 
-def explain(seq, tok, esm2, probe_dir_np, top_feat_ids, sae=None):
+def explain(seq, tok, esm2, probe_dir_np, sae=None):
     """DPA and SAE: which layers and structural features contributed most to this sequence's score."""
-    t = tok(seq, return_tensors='pt', truncation=True, max_length=512).to(DEVICE)
+    t = tok(seq, return_tensors='pt', truncation=True, max_length=512, padding=True).to(DEVICE)
     with torch.no_grad():
         out = esm2(**t, output_hidden_states=True)
     
@@ -139,13 +138,13 @@ def screen(fasta_path, threshold=0.5, explain_output=False):
             'flagged':           score >= threshold,
         }
         if explain_output:
-            result['explanation'] = explain(seq, tok, esm2, probe_dir_np, top_feat_ids, sae=sae)
+            result['explanation'] = explain(seq, tok, esm2, probe_dir_np, sae=sae)
             
         results.append(result)
         flag = '🚨' if score >= threshold else '✓'
         print(f'  {flag} {rec.id:30s}  P(toxin)={score:.3f}  [{result["risk_level"]}]', file=sys.stderr)
         
-        if explain_output and sae is not None and score >= threshold:
+        if explain_output and sae is not None:
             active_sae = result['explanation'].get('sae_active_toxin_features', {})
             if active_sae:
                 feats_str = ", ".join([f"[{v['type']}] {k} ({v['val']:.2f})" for k, v in list(active_sae.items())[:4]])
