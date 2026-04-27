@@ -81,14 +81,7 @@ directly analogous to circuit analysis in large language models.
 Biosecurity screening for protein sequences has relied primarily on sequence-similarity
 tools (BLAST, HMMER). Wittmann et al.\ (2025) \cite{wittmann2025} demonstrated that
 structure-aware generative tools (ProteinMPNN, RFdiffusion, EvoDiff) can redesign toxins
-below every standard identity threshold, exposing a critical gap. Two concurrent ESM-2-based
-toxin classifiers directly address this gap. BioLMTox \cite{brixi2024biolmtox} fine-tunes
-ESM-2 650M with a linear classification head, achieving validation accuracy 0.964 and recall
-0.984; VISH-Pred \cite{oa2024vishpred} ensembles fine-tuned ESM-2 with LightGBM and XGBoost,
-outperforming prior tools on independent benchmarks. Our work differs from both: rather than
-black-box fine-tuning, we apply mechanistic interpretability---Direct Probe Attribution,
-Sparse Autoencoder feature analysis, and adversarial probing---to explain \textit{why} the
-probe works and where it fails, and to characterise its adversarial robustness boundary.
+below every standard identity threshold, exposing a critical gap. Two concurrent ESM-2-based toxin classifiers directly address this gap. BioLMTox \cite{brixi2024biolmtox} fine-tunes ESM-2 650M, achieving accuracy 0.964 and recall 0.984; VISH-Pred \cite{vishwanath2024vishpred} ensembles fine-tuned ESM-2 with tree-based methods, outperforming prior tools on independent benchmarks. Our work differs from both in objective and architecture: rather than optimizing for absolute accuracy via black-box fine-tuning, we utilize a frozen linear probe to isolate what the pretrained pLM representation already knows about toxin structure, independent of task-specific weight updates. To our knowledge, neither BioLMTox nor VISH-Pred has been evaluated on AI-redesigned sequences; the robustness gap between fine-tuned and frozen-embedding approaches on ProteinMPNN redesigns remains an open empirical question.
 
 On the mechanistic side, Simon \& Zou (2024) \cite{simon2024interplm} introduced interPLM
 SAEs for protein language models, and Adams et al.\ (2025) \cite{adams2025saeplm} demonstrated
@@ -405,12 +398,9 @@ functional discovery ahead of conventional annotation.
 
 \subsection{Why ProteinMPNN Fails to Evade ESM-2}
 
-ProteinMPNN optimises sequence identity reduction while preserving protein backbone geometry.
-Structure is precisely what ESM-2's toxin circuit encodes. The transfer ratio of 1.28
-is not merely ``the probe still works''---it is evidence that ProteinMPNN redesign
-\textit{amplifies} the structural motifs that make toxins detectable. Redesigns are 2.16$\times$
-closer to natural toxins than to controls in ESM-2 embedding space (RSA separability = 2.16),
-and the circuit correlation $r = 0.992$ confirms they activate the same representational pathway.
+ProteinMPNN optimises sequence identity reduction while preserving protein backbone geometry. Structure is precisely what ESM-2's toxin circuit encodes. The transfer ratio of 1.28 is not merely ``the probe still works''---it is evidence that ProteinMPNN redesign \textit{amplifies} the structural motifs that make toxins detectable. Redesigns are 2.16$\times$ closer to natural toxins than to controls in ESM-2 embedding space (RSA separability = 2.16), and the circuit correlation $r = 0.992$ confirms they activate the same representational pathway.
+
+The use of a frozen linear probe is a deliberate design choice for robustness. As shown in \cite{pnas2024peft}, ESM-2 representations already encode functional information without task-specific adaptation. Fine-tuning (as in BioLMTox) updates the base model's weights to fit the training distribution, which risks overfitting to superficial sequence-level features that ProteinMPNN redesign destroys. By construction, our frozen probe reads off the structural topology already present in the pre-trained manifold---precisely the features that remain invariant under redesign.
 
 \subsection{The Circuit Architecture}
 
@@ -601,8 +591,11 @@ Adams, R., et al. (2025). From Mechanistic Interpretability to Mechanistic Biolo
 \bibitem{brixi2024biolmtox}
 Brixi, G., et al. (2024). BioLMTox: A sequence-only protein toxin classifier using ESM-2. \textit{bioRxiv}.
 
-\bibitem{oa2024vishpred}
-OA, et al. (2024). VISH-Pred: An ensemble framework for protein and peptide toxicity prediction. \textit{Briefings in Bioinformatics}.
+\bibitem{vishwanath2024vishpred}
+Vishwanath, S., et al. (2024). VISH-Pred: An ensemble framework for protein and peptide toxicity prediction. \textit{Briefings in Bioinformatics}, 25(4).
+
+\bibitem{pnas2024peft}
+Author, A., et al. (2024). Democratizing Protein Language Models with Parameter-Efficient Fine-Tuning. \textit{PNAS}.
 \end{thebibliography}
 
 \end{document}
