@@ -36,7 +36,17 @@ def load_model(model_id='facebook/esm2_t33_650M_UR50D', probe_path='results/prob
     probe = nn.Linear(1280, 1, bias=False)
     probe.weight.data = torch.tensor(w, dtype=torch.float32).unsqueeze(0)
     probe = probe.to(DEVICE).eval()
-    return tok, esm2, probe, w
+    
+    # Try loading SAE
+    sae = None
+    try:
+        from interplm.sae.inference import load_sae_from_hf
+        print("Loading interPLM SAE model for feature extraction...", file=sys.stderr)
+        sae = load_sae_from_hf(plm_model='esm2-650m', plm_layer=33).to(DEVICE).eval()
+    except ImportError:
+        print("Note: interplm not installed. SAE feature extraction disabled.", file=sys.stderr)
+
+    return tok, esm2, probe, w, sae
 
 def embed(seq, tok, esm2, layer=33):
     t = tok(seq, return_tensors='pt', truncation=True,
@@ -56,20 +66,46 @@ def risk_level(score):
         if score >= thr: return level
     return 'SAFE'
 
-def explain(seq, tok, esm2, probe_dir_np, top_feat_ids):
-    """DPA: which layers contributed most to this sequence's score."""
+def explain(seq, tok, esm2, probe_dir_np, top_feat_ids, sae=None):
+    """DPA and SAE: which layers and structural features contributed most to this sequence's score."""
     t = tok(seq, return_tensors='pt', truncation=True, max_length=512).to(DEVICE)
     with torch.no_grad():
         out = esm2(**t, output_hidden_states=True)
+    
+    # Direct Probe Attribution
     hs = [h.squeeze(0).mean(0).cpu().numpy() for h in out.hidden_states]
     w  = probe_dir_np / (np.linalg.norm(probe_dir_np) + 1e-8)
     dpa = [(w * (hs[l] - hs[l-1])).sum() for l in range(1, 34)]
     top_layers = sorted(range(33), key=lambda i: dpa[i], reverse=True)[:5]
-    return {'top_discriminating_layers': [l+1 for l in top_layers],
-            'layer_attribution': [float(x) for x in dpa]}
+    
+    res = {
+        'top_discriminating_layers': [l+1 for l in top_layers],
+        'layer_attribution': [float(x) for x in dpa]
+    }
+    
+    # SAE Feature Extraction
+    if sae is not None:
+        emb_33 = out.hidden_states[33].mean(dim=1) # (1, 1280)
+        with torch.no_grad():
+            try:
+                acts = sae.encode(emb_33).squeeze(0).cpu().numpy()
+            except AttributeError:
+                acts = sae(emb_33)[1].squeeze(0).cpu().numpy()
+        
+        active_features = {}
+        for feat_id, name in FEATURE_NAMES.items():
+            val = float(acts[feat_id])
+            if val > 0:
+                active_features[name] = val
+                
+        # Sort by activation strength
+        active_features = {k: v for k, v in sorted(active_features.items(), key=lambda item: item[1], reverse=True)}
+        res['sae_active_toxin_features'] = active_features
+        
+    return res
 
 def screen(fasta_path, threshold=0.5, explain_output=False):
-    tok, esm2, probe, probe_dir_np = load_model()
+    tok, esm2, probe, probe_dir_np, sae = load_model()
     top_feat_ids = list(FEATURE_NAMES.keys())
     results = []
 
@@ -91,10 +127,17 @@ def screen(fasta_path, threshold=0.5, explain_output=False):
             'flagged':           score >= threshold,
         }
         if explain_output:
-            result['explanation'] = explain(seq, tok, esm2, probe_dir_np, top_feat_ids)
+            result['explanation'] = explain(seq, tok, esm2, probe_dir_np, top_feat_ids, sae=sae)
+            
         results.append(result)
         flag = '🚨' if score >= threshold else '✓'
         print(f'  {flag} {rec.id:30s}  P(toxin)={score:.3f}  [{result["risk_level"]}]', file=sys.stderr)
+        
+        if explain_output and sae is not None and score >= threshold:
+            active_sae = result['explanation'].get('sae_active_toxin_features', {})
+            if active_sae:
+                feats_str = ", ".join([f"{k} ({v:.2f})" for k, v in list(active_sae.items())[:3]])
+                print(f'     ↳ Detected Motifs: {feats_str}', file=sys.stderr)
 
     return results
 
