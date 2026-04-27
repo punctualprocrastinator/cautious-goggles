@@ -11,15 +11,20 @@ from pathlib import Path
 DEVICE = 'cuda' if torch.cuda.is_available() else 'cpu'
 RISK_LEVELS = {0.8: 'HIGH', 0.5: 'MEDIUM', 0.2: 'LOW', 0.0: 'SAFE'}
 
-FEATURE_NAMES = {   # From our taxonomy
-    6122: 'scaffold_histidine_proline',
-    4097: 'structural_rigidity_pro_lys',
-    1055: 'charged_scaffold_glu',
-    8112: 'core_disulfide_cys_arg',
-    9487: 'disulfide_cys_val',
-    9242: 'disulfide_cys_ile_pro',
-    5406: 'disulfide_cys_gln',
-    6971: 'backbone_pro_val',
+FEATURE_NAMES = {   # From our taxonomy with SAE robustness classes
+    # ROBUST FEATURES (Transfer Ratio > 1.0)
+    6122: ('scaffold_histidine_proline', 'ROBUST'),
+    4097: ('structural_rigidity_pro_lys', 'ROBUST'),
+    1055: ('charged_scaffold_glu', 'ROBUST'),
+    8112: ('core_disulfide_cys_arg', 'ROBUST'),
+    9487: ('disulfide_cys_val', 'ROBUST'),
+    9242: ('disulfide_cys_ile_pro', 'ROBUST'),
+    5406: ('disulfide_cys_gln', 'ROBUST'),
+    6971: ('backbone_pro_val', 'ROBUST'),
+    # EVADABLE FEATURES (Transfer Ratio < 0.3)
+    5312: ('surface_motif_A', 'EVADABLE'),
+    9026: ('surface_motif_B', 'EVADABLE'),
+    4397: ('surface_motif_C', 'EVADABLE'),
 }
 
 def load_model(model_id='facebook/esm2_t33_650M_UR50D', probe_path='results/probe_direction.npy'):
@@ -93,13 +98,13 @@ def explain(seq, tok, esm2, probe_dir_np, top_feat_ids, sae=None):
                 acts = sae(emb_33)[1].squeeze(0).cpu().numpy()
         
         active_features = {}
-        for feat_id, name in FEATURE_NAMES.items():
+        for feat_id, (name, f_type) in FEATURE_NAMES.items():
             val = float(acts[feat_id])
             if val > 0:
-                active_features[name] = val
+                active_features[name] = {'val': val, 'type': f_type}
                 
         # Sort by activation strength
-        active_features = {k: v for k, v in sorted(active_features.items(), key=lambda item: item[1], reverse=True)}
+        active_features = {k: v for k, v in sorted(active_features.items(), key=lambda item: item[1]['val'], reverse=True)}
         res['sae_active_toxin_features'] = active_features
         
     return res
@@ -136,8 +141,16 @@ def screen(fasta_path, threshold=0.5, explain_output=False):
         if explain_output and sae is not None and score >= threshold:
             active_sae = result['explanation'].get('sae_active_toxin_features', {})
             if active_sae:
-                feats_str = ", ".join([f"{k} ({v:.2f})" for k, v in list(active_sae.items())[:3]])
+                feats_str = ", ".join([f"[{v['type']}] {k} ({v['val']:.2f})" for k, v in list(active_sae.items())[:4]])
                 print(f'     ↳ Detected Motifs: {feats_str}', file=sys.stderr)
+                
+                has_robust = any(v['type'] == 'ROBUST' for v in active_sae.values())
+                has_evadable = any(v['type'] == 'EVADABLE' for v in active_sae.values())
+                
+                if has_robust and not has_evadable:
+                    print(f'     🚨 WARNING: DECEPTIVE SIGNATURE DETECTED!', file=sys.stderr)
+                    print(f'        Sequence exhibits core structural scaffolds but lacks superficial motifs.', file=sys.stderr)
+                    print(f'        Highly indicative of an adversarial AI redesign / Double-Evader.', file=sys.stderr)
 
     return results
 
