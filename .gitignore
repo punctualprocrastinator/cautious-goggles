@@ -65,3 +65,10 @@ runtine_juypters/
 
 # Ignore zip files
 *.zip
+
+# Ignore temp files
+temp.js
+node_modules/
+package-lock.json
+package.json
+*.pptx
