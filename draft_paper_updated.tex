@@ -655,6 +655,36 @@ pSSR evasion & 100\% \\
 
 \noindent $^\dagger$HotFlip sequences may not retain protein function; wet-lab validation pending.
 
+\appendix
+\section{Deep Double-Evader Scaffold Analysis}
+
+While the ESM-2 probe demonstrates a 93.9\% overall detection rate against ProteinMPNN redesigns, the evasion rate is not uniformly distributed. We performed a scaffold-level analysis on the 89 ``Double-Evaders'' (sequences that evaded both BLAST and the ESM-2 probe). 
+
+A Kruskal-Wallis test reveals that evasion is highly scaffold-dependent. A small cluster of ``susceptible'' structural scaffolds consistently produce evading sequences (e.g., A0A348G5W2 and A0A835CKX4 at 100\% evasion, P86523 at 86\% evasion). Conversely, the vast majority of scaffolds (48 distinct fold families) are completely ``robust'', producing 0\% evasion across all their redesigns. 
+
+Furthermore, Double-Evaders are significantly further from training positives in embedding space than detected redesigns (mean $L_2$ distance 3.14 vs 2.49, Mann-Whitney $U=20776, p<0.001$). This indicates a \textit{coverage problem} in the training distribution: the probe fails not because its architecture is weak, but because certain structural topologies were underrepresented during training, creating local blind spots in the decision manifold.
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{lc|lc}
+\toprule
+\textbf{Susceptible Scaffolds ($>50\%$ Evasion)} & \textbf{Rate} & \textbf{Representative Robust Scaffolds} & \textbf{Rate} \\
+\midrule
+A0A348G5W2 & 10/10 (100\%) & P0DKN5 & 0/3 (0\%) \\
+A0A835CKX4 & 10/10 (100\%) & P0DJE7 & 0/3 (0\%) \\
+P86523 & 6/7 (86\%) & B1P1I0 & 0/10 (0\%) \\
+A0A6G9KJV6 & 8/10 (80\%) & A0A7S8MVF3 & 0/6 (0\%) \\
+P0C8D4 & 7/9 (78\%) & Q9PRQ3 & 0/10 (0\%) \\
+P0C7B1 & 7/10 (70\%) & P24335 & 0/8 (0\%) \\
+P0DJB4 & 4/7 (57\%) & P0DM71 & 0/4 (0\%) \\
+\bottomrule
+\end{tabular}
+\caption{Scaffold-level evasion rates. Evasion is highly bimodal: a few specific structural folds are systematically vulnerable to redesign-based evasion, while 48 other folds produce redesigns that are detected 100\% of the time.}
+\end{table}
+
+As demonstrated in Section 3.3, passing these Double-Evaders through a Sparse Autoencoder (SAE) successfully disentangles the concealed motifs, allowing a calibrated classifier to detect 38\% of them. This confirms that even for highly susceptible scaffolds, the underlying toxic motifs are still retained in the latent representations, but require sparse extraction to overcome superposition.
+
 \begin{thebibliography}{9}
 \bibitem{wittmann2025}
 Wittmann, B.J., et al. (2025). Strengthening nucleic acid biosecurity screening against generative protein design tools. \textit{Science}.
