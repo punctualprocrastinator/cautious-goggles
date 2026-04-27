@@ -35,18 +35,18 @@
 % ============================================================
 \begin{abstract}
 Standard biosecurity screening uses sequence identity (BLAST), but ProteinMPNN redesigns
-toxin sequences below every BLAST threshold---achieving 0\% detection across 723 redesigns.
+toxin sequences below every BLAST threshold, achieving 0\% detection across 723 redesigns.
 A linear ESM-2 probe maintains 93.9\% detection with no retraining. Using interPLM Sparse
 Autoencoders (SAEs), we identify 50 features at 205$\times$ compression explaining probe
 performance; these features are \textit{amplified} by redesign (mean transfer ratio 1.28),
-because ProteinMPNN preserves structural fold topology---precisely what the circuit encodes.
+because ProteinMPNN preserves structural fold topology, precisely what the circuit encodes.
 A four-tier attack taxonomy reveals the security boundary lies at gradient access:
 ProteinMPNN (6.1\% evasion) vs.\ white-box attacks (100\%). Direct Probe Attribution
 identifies layer 32 as the bottleneck ($r = 0.992$ redesign--toxin circuit correlation).
 SAE-based probes recover 38\% of ``Double-Evaders'' that fool both BLAST and dense linear
 probes, demonstrating direction-sensitive detection beyond Euclidean boundaries.
 Zero-shot scanning discovers 248 UniRef50 candidates enriched 4.75$\times$ for secreted
-signal peptides, including cross-kingdom fungal effectors---54\% currently annotated as
+signal peptides, including cross-kingdom fungal effectors, 54\% currently annotated as
 ``Uncharacterized'' in UniProt. The probe's security guarantee equals the privacy of its weights.
 \end{abstract}
 
@@ -59,17 +59,17 @@ Dual-use protein screening relies on sequence-identity thresholds. Wittmann \tex
 below standard 40\% identity thresholds, bypassing BLAST-based screening. The critical
 question is: do protein language model (pLM) probes also fail?
 
-We answer no---and explain mechanistically why, using a toolkit from mechanistic interpretability
+We answer no, and explain mechanistically why, using a toolkit from mechanistic interpretability
 directly analogous to circuit analysis in large language models.
 
-\textbf{New contributions (this hackathon):} The underlying models (ESM-2, interPLM SAEs, ProteinMPNN) are existing tools. All analysis presented here---probe training, the four-tier adversarial attack taxonomy, Direct Probe Attribution circuit analysis, deep mutational scanning, SAE double-evader recovery, and zero-shot UniRef50 screening with AlphaFold validation---is new work conducted during this hackathon.
+\textbf{New contributions (this hackathon):} The underlying models (ESM-2, interPLM SAEs, ProteinMPNN) are existing tools. All analysis presented here, probe training, the four-tier adversarial attack taxonomy, Direct Probe Attribution circuit analysis, deep mutational scanning, SAE double-evader recovery, and zero-shot UniRef50 screening with AlphaFold validation, is new work conducted during this hackathon.
 
 \textbf{Contributions:}
 \begin{enumerate}
     \item \textbf{Quantitative gap}: BLAST detects 0\% of 723 ProteinMPNN redesigns; ESM-2 probe detects 93.9\%.
     \item \textbf{SAE circuit}: 50 sparse features (205$\times$ compression) explain the probe; mean transfer ratio 1.28 shows redesigns \textit{amplify} toxin features.
     \item \textbf{Attack taxonomy}: Four attacks spanning blackbox to oracle, with the security boundary at gradient access (not sequence/embedding space).
-    \item \textbf{UAP geometry}: Universal attack direction stable at cos $= -0.805$ across all $\epsilon$---a structural property of the toxin manifold.
+    \item \textbf{UAP geometry}: Universal attack direction stable at cos $= -0.805$ across all $\epsilon$, a structural property of the toxin manifold.
     \item \textbf{Zero-shot discovery}: 248 UniRef50 candidates including cross-kingdom fungal effectors and WHO Priority 1 pathogen proteins; 135 (54\%) currently uncharacterized in UniProt.
     \item \textbf{Mutation robustness}: 0/1,179 single-point mutations evade detection; the circuit reads chemical polarity, not sequence identity.
 \end{enumerate}
@@ -87,7 +87,7 @@ On the mechanistic side, Simon \& Zou (2024) \cite{simon2024interplm} introduced
 SAEs for protein language models, and Adams et al.\ (2025) \cite{adams2025saeplm} demonstrated
 SAE-based mechanistic biology. Our attack taxonomy draws on Zou et al.\ (2023)
 \cite{zou2023universal} (universal adversarial attacks on LLMs) and Madry et al.\ (2018)
-\cite{madry2018pgd} (PGD robustness)---establishing the protein-space analogues of established
+\cite{madry2018pgd} (PGD robustness), establishing the protein-space analogues of established
 NLP security concepts.
 
 % ============================================================
@@ -142,13 +142,13 @@ Entire toxin families (neurotoxin, phospholipase, conotoxin, snake) held out one
 \section{Results}
 % ============================================================
 
-\subsection{Layer Sweep --- Layer 33 Is Best}
+\subsection{Layer Sweep,  Layer 33 Is Best}
 
 Preliminary layer sweep (AUROC at layers 1--33) confirmed layer 33 as optimal (AUROC 0.9970 vs.\ 0.9678 at layer 1); full results in Appendix~A.
 
 \subsection{BLAST vs ESM-2 Probe on Redesigns}
 
-All 723 ProteinMPNN redesigns fall below 30\% sequence identity to training toxins---entirely
+All 723 ProteinMPNN redesigns fall below 30\% sequence identity to training toxins, entirely
 evading BLAST at every threshold. The ESM-2 probe detects 93.9\% with no exposure to redesigned sequences during training.
 
 \begin{table}[H]
@@ -175,7 +175,7 @@ ESM-2 SAE top-50 features & \textbf{86.0\%} \\
 
 \subsection{Disentangling Evasion via Sparse Autoencoders}
 
-A critical limitation of linear probing is its Euclidean decision boundary: the probe flags sequences within a learned radius of training positives in dense embedding space. Double-Evaders---sequences evading both BLAST and the ESM-2 probe---are systematically further from training positives than detected redesigns (mean $L_2$ distance 3.18 vs.\ 2.47, Mann-Whitney $p<0.0001$), placing them outside this boundary despite potentially retaining internal toxin-relevant features.
+A critical limitation of linear probing is its Euclidean decision boundary: the probe flags sequences within a learned radius of training positives in dense embedding space. Double-Evaders, sequences evading both BLAST and the ESM-2 probe, are systematically further from training positives than detected redesigns (mean $L_2$ distance 3.18 vs.\ 2.47, Mann-Whitney $p<0.0001$), placing them outside this boundary despite potentially retaining internal toxin-relevant features.
 
 To test whether ESM-2 internally represents the toxicity of these sequences despite linear probe failure, we passed 92 Double-Evader embeddings through the Sparse Autoencoder (SAE), extracting the top 50 toxin-discriminating features and training a \texttt{ToxinProbe} identical in architecture and regularisation to the main probe on this sparse feature subset.
 
@@ -187,7 +187,7 @@ The 62\% of Double-Evaders unrecovered by any method (57/92) represent a genuine
 
 Cross-family holdout (neurotoxin, phospholipase, conotoxin, snake venom held out in turn) yields mean AUROC = 0.9929, confirming the probe encodes structural motifs rather than family-specific patterns. Activation steering at $\alpha = +2.0$ raises the 50 lowest-scoring controls from 0.000 to 1.000, demonstrating toxicity is a causal linear direction in ESM-2 space. Full tables in Appendix~A.
 
-\subsection{SAE Feature Discovery --- Bimodal Transfer}
+\subsection{SAE Feature Discovery,  Bimodal Transfer}
 
 Top-50 SAE features achieve AUROC 0.9447 vs 0.9585 full embedding (98.6\% retained performance at 205$\times$ compression). Of 10,240 features, 8,345 are dead (81.5\%).
 
@@ -214,7 +214,7 @@ Top-50 SAE features achieve AUROC 0.9447 vs 0.9585 full embedding (98.6\% retain
 
 The probe direction is geometrically orthogonal to individual SAE features: only 1 of 50 top-AUROC features appears in the top-100 probe-aligned SAE features (cosine ${>}$ 0.33). The most probe-aligned SAE feature (F8284, cosine $= +0.501$) is the most evadable (transfer $= 0.015$). The probe's 93.9\% detection is a \textit{collective} property consistent with the superposition hypothesis (SAE transfer histogram in Appendix~A).
 
-\subsection{Direct Probe Attribution --- The Toxin Circuit}
+\subsection{Direct Probe Attribution,  The Toxin Circuit}
 
 \begin{table}[H]
 \centering
@@ -234,7 +234,7 @@ The probe direction is geometrically orthogonal to individual SAE features: only
 \caption{Direct Probe Attribution per layer (toxin vs.\ control). Layer 32 shows the largest separation (DPA $+130.1$), identifying it as the primary circuit bottleneck. Redesigns produce near-identical DPA patterns to natural toxins ($r = 0.992$); full redesign column and DPA trajectory figures in Appendix~A.}
 \end{table}
 
-\textbf{Redesign circuit correlation:} $r = 0.9919$. Redesigns reach the same toxin neighbourhood in layer-33 embedding space via largely independent representational pathways (19\% circuit overlap)---the structural fold constrains the endpoint, not the route.
+\textbf{Redesign circuit correlation:} $r = 0.9919$. Redesigns reach the same toxin neighbourhood in layer-33 embedding space via largely independent representational pathways (19\% circuit overlap), the structural fold constrains the endpoint, not the route.
 
 \subsection{Adversarial Attack Taxonomy}
 
@@ -250,7 +250,7 @@ PGD $\epsilon$=2 & PGD & Embedding & Full whitebox & $L_2$ ball & 100\% & $-1.00
 pSSR $\epsilon$=2 & FGSM / oracle & Embedding & Full whitebox & $L_2$ ball & 100\% & $-0.805$ \\
 \bottomrule
 \end{tabular}
-\caption{Four-tier attack taxonomy. $^\dagger$HotFlip achieves 100\% sequence-space evasion but operates without structural supervision---unlike ProteinMPNN, which explicitly preserves backbone geometry. The operationally relevant metric is 93.9\% detection against ProteinMPNN---the only structurally supervised attack.}
+\caption{Four-tier attack taxonomy. $^\dagger$HotFlip achieves 100\% sequence-space evasion but operates without structural supervision, unlike ProteinMPNN, which explicitly preserves backbone geometry. The operationally relevant metric is 93.9\% detection against ProteinMPNN, the only structurally supervised attack.}
 \end{table}
 
 The security boundary lies at \textbf{gradient access}, not sequence vs.\ embedding space:
@@ -264,11 +264,11 @@ white-box GCG-style attacks succeed \cite{zou2023universal}.
 \caption{Attack convergence curves across the four attack types. ProteinMPNN (blackbox, fold-preserving) plateaus at 6.1\% evasion; gradient-based attacks converge to 100\%.}
 \end{figure}
 
-\subsection{Universal Adversarial Perturbation (UAP) --- Manifold Geometry}
+\subsection{Universal Adversarial Perturbation (UAP),  Manifold Geometry}
 
-The UAP direction deviates 36\textdegree\ from the anti-probe direction (cos $= -0.805$ vs $-1.000$ for PGD). An epsilon sweep reveals a smooth evasion curve with a security margin at $\epsilon = 0.5$ (where evasion crosses 50\%, full table in Appendix~B). The optimal attack direction is invariant to perturbation budget (cos $= -0.805$ at all $\epsilon$). SAE decomposition reveals the UAP suppresses the \textit{robust} structural features (\#4097, \#1055; $\Delta = -0.048, -0.045$)---the same features ProteinMPNN cannot evade. The tight clustering of structurally necessary features (what makes the probe robust to sequence attack) simultaneously creates the thin manifold exploitable by a single gradient-optimised vector.
+The UAP direction deviates 36\textdegree\ from the anti-probe direction (cos $= -0.805$ vs $-1.000$ for PGD). An epsilon sweep reveals a smooth evasion curve with a security margin at $\epsilon = 0.5$ (where evasion crosses 50\%, full table in Appendix~B). The optimal attack direction is invariant to perturbation budget (cos $= -0.805$ at all $\epsilon$). SAE decomposition reveals the UAP suppresses the \textit{robust} structural features (\#4097, \#1055; $\Delta = -0.048, 0.045$), the same features ProteinMPNN cannot evade. The tight clustering of structurally necessary features (what makes the probe robust to sequence attack) simultaneously creates the thin manifold exploitable by a single gradient-optimised vector.
 
-\subsection{Deep Mutational Scan --- Sequence Robustness}
+\subsection{Deep Mutational Scan,  Sequence Robustness}
 
 All 1,179 single-point mutants of a representative toxin sequence (WT score = 0.998) were scored.
 
@@ -313,19 +313,19 @@ N29A & Methyl only & 0.958 & $-0.040$ \\
 \caption{Conservative substitution analysis at N29 (condensed, full table in Appendix~E). The circuit detects polarity, not amino acid identity: polar substitutions produce drops $< 0.01$; hydrophobic substitutions produce drops $>0.16$.}
 \end{table}
 
-\textbf{Key finding}: 0/1,179 single-point mutations evade detection. The circuit at position 29 detects \textit{polarity} rather than amino acid identity---any polar residue maintains the signal; hydrophobic substitutions partially disrupt it, consistent with a hydrogen-bonding network readout of the toxin fold.
+\textbf{Key finding}: 0/1,179 single-point mutations evade detection. The circuit at position 29 detects \textit{polarity} rather than amino acid identity, any polar residue maintains the signal; hydrophobic substitutions partially disrupt it, consistent with a hydrogen-bonding network readout of the toxin fold.
 
 \subsection{Zero-Shot Threat Discovery in UniRef50}
 
 A probe trained exclusively on animal and bacterial toxins scores the confirmed fungal
-effector Ecp2 from \textit{Colletotrichum} at 0.9905---despite fungi being an entirely
+effector Ecp2 from \textit{Colletotrichum} at 0.9905, despite fungi being an entirely
 absent kingdom in training data. This is not an outlier: scanning 1,000 random UniRef50
 sequences, 248 score above 0.85, enriched 4.75$\times$ for secreted signal peptides
 (38\% vs.\ 8\%, Fisher's exact $p < 0.001$). Confirmed hits include a Hemolysin (0.9996),
 Leukotoxin (0.9922), and two proteins from \textit{A.\ baumannii} (WHO Priority 1
 pathogen, scores 0.9995 and 0.9993). One initially annotated as ``Uncharacterised'' was
 confirmed via AlphaFold EBI as a GDSL-like Lipase/Acylhydrolase (gene J506\_3968,
-pLDDT = 83.0)---a well-folded secreted enzyme that degrades host membrane phospholipids.
+pLDDT = 83.0), a well-folded secreted enzyme that degrades host membrane phospholipids.
 The probe has learned \textit{secreted virulence protein space}, not toxin family membership.
 
 \begin{table}[H]
@@ -342,7 +342,7 @@ GDSL-like Lipase$^\ddagger$   & \textit{A. baumannii} 625974 (WHO P1) & 0.9993 \
 Cyclolysin                    & \textit{Candidatus Accumulibacter} & 0.9810 \\
 \bottomrule
 \end{tabular}
-\caption{Zero-shot UniRef50 hits, ordered by novelty. $^\ast$Ecp2: experimentally validated fungal effector---cross-kingdom generalisation from a probe trained exclusively on animal and bacterial toxins. $^\dagger$A0A009RXF9 (67 aa); AlphaFold pLDDT = 43.6 (fully disordered), candidate for wet-lab cytotoxicity assay. $^\ddagger$A0A009QBX0; annotated as ``Uncharacterized protein'' in UniProt, but confirmed via AlphaFold EBI structural homology as a GDSL-like Lipase/Acylhydrolase (pLDDT = 83.0, 44.6\% residues $>90$)---demonstrating the probe identifies functional threats that current databases have not yet annotated. Five organism groups account for 58\% of all 248 hits: \textit{C.\ Accumulibacter} (50), \textit{Ruminococcus} (39), \textit{Colletotrichum}/fungi (29), \textit{Acinetobacter} incl.\ \textit{baumannii} (26), and \textit{Pseudomonas} (24).}
+\caption{Zero-shot UniRef50 hits, ordered by novelty. $^\ast$Ecp2: experimentally validated fungal effector, cross-kingdom generalisation from a probe trained exclusively on animal and bacterial toxins. $^\dagger$A0A009RXF9 (67 aa); AlphaFold pLDDT = 43.6 (fully disordered), candidate for wet-lab cytotoxicity assay. $^\ddagger$A0A009QBX0; annotated as ``Uncharacterized protein'' in UniProt, but confirmed via AlphaFold EBI structural homology as a GDSL-like Lipase/Acylhydrolase (pLDDT = 83.0, 44.6\% residues $>90$), demonstrating the probe identifies functional threats that current databases have not yet annotated. Five organism groups account for 58\% of all 248 hits: \textit{C.\ Accumulibacter} (50), \textit{Ruminococcus} (39), \textit{Colletotrichum}/fungi (29), \textit{Acinetobacter} incl.\ \textit{baumannii} (26), and \textit{Pseudomonas} (24).}
 \end{table}
 
 \subsection{The Probe Learned ``Secreted Virulence,'' Not ``Toxin''}
@@ -353,7 +353,7 @@ support this:
 
 \begin{enumerate}
     \item \textbf{Cross-kingdom transfer.} Ecp2 is an experimentally validated fungal effector
-    that manipulates plant immune signalling---phylogenetically unrelated to any animal or
+    that manipulates plant immune signalling, phylogenetically unrelated to any animal or
     bacterial toxin in the training set. Twenty-three total fungal hits from
     \textit{Colletotrichum}/Pezizomycotina, most with signal peptides, confirm this is systematic,
     not coincidental.
@@ -367,7 +367,7 @@ support this:
 
     \item \textbf{Signal peptide enrichment.} The 4.75$\times$ enrichment for signal peptides
     among high-scoring hits (38\% vs.\ 8\% in low-scoring sequences) directly confirms the
-    learned concept is ``secreted''---the defining property of both toxins and effectors.
+    learned concept is ``secreted'', the defining property of both toxins and effectors.
 \end{enumerate}
 
 \noindent\textbf{Deployment consideration.} A 248/1,000 (24.8\%) flag rate at the 0.85
@@ -377,7 +377,7 @@ reduction) while retaining 8 of 11 confirmed virulence hits (73\%). The three
 lost hits (Virulence protein E at 0.929, Toxin at 0.924, Pilus assembly CpaC
 at 0.859) suggest the probe assigns lower confidence to virulence factors acting
 through assembly machinery and host-interaction domains rather than direct
-cytotoxicity---a systematic blind spot addressable by training on a broader
+cytotoxicity, a systematic blind spot addressable by training on a broader
 virulence ontology beyond toxin annotations. The 4.75$\times$ signal peptide
 enrichment demonstrates that the majority of flags are functionally meaningful
 secreted proteins rather than noise, making them appropriate candidates for
@@ -386,8 +386,8 @@ secondary review rather than false positives to be discarded. Critically,
 ``Uncharacterized protein'' in UniProt, representing potential novel virulence
 factors that existing annotation pipelines have not identified. One such protein
 (A0A009QBX0, score 0.9993) was independently confirmed via AlphaFold structural
-homology as a GDSL-like Lipase/Acylhydrolase---a known class of secreted
-membrane-degrading virulence factors---illustrating the probe's capacity for
+homology as a GDSL-like Lipase/Acylhydrolase, a known class of secreted
+membrane-degrading virulence factors, illustrating the probe's capacity for
 functional discovery ahead of conventional annotation.
 
 
@@ -398,9 +398,9 @@ functional discovery ahead of conventional annotation.
 
 \subsection{Why ProteinMPNN Fails to Evade ESM-2}
 
-ProteinMPNN optimises sequence identity reduction while preserving protein backbone geometry. Structure is precisely what ESM-2's toxin circuit encodes. The transfer ratio of 1.28 is not merely ``the probe still works''---it is evidence that ProteinMPNN redesign \textit{amplifies} the structural motifs that make toxins detectable. Redesigns are 2.16$\times$ closer to natural toxins than to controls in ESM-2 embedding space (RSA separability = 2.16), and the circuit correlation $r = 0.992$ confirms they activate the same representational pathway.
+ProteinMPNN optimises sequence identity reduction while preserving protein backbone geometry. Structure is precisely what ESM-2's toxin circuit encodes. The transfer ratio of 1.28 is not merely ``the probe still works'', it is evidence that ProteinMPNN redesign \textit{amplifies} the structural motifs that make toxins detectable. Redesigns are 2.16$\times$ closer to natural toxins than to controls in ESM-2 embedding space (RSA separability = 2.16), and the circuit correlation $r = 0.992$ confirms they activate the same representational pathway.
 
-The use of a frozen linear probe is a deliberate design choice for robustness. As shown in \cite{pnas2024peft}, ESM-2 representations already encode functional information without task-specific adaptation. Fine-tuning (as in BioLMTox) updates the base model's weights to fit the training distribution, which risks overfitting to superficial sequence-level features that ProteinMPNN redesign destroys. By construction, our frozen probe reads off the structural topology already present in the pre-trained manifold---precisely the features that remain invariant under redesign.
+The use of a frozen linear probe is a deliberate design choice for robustness. As shown in \cite{pnas2024peft}, ESM-2 representations already encode functional information without task-specific adaptation. Fine-tuning (as in BioLMTox) updates the base model's weights to fit the training distribution, which risks overfitting to superficial sequence-level features that ProteinMPNN redesign destroys. By construction, our frozen probe reads off the structural topology already present in the pre-trained manifold, precisely the features that remain invariant under redesign.
 
 \subsection{The Circuit Architecture}
 
@@ -409,7 +409,7 @@ The use of a frozen linear probe is a deliberate design choice for robustness. A
     \item \textbf{Mid layers (17--20)}: Primary toxin discrimination (DPA +40--45)
     \item \textbf{Suppressor layers (27--28)}: Internal regulation
     \item \textbf{Final layers (29--32)}: Strong final-phase discrimination (DPA +23--130), with layer 32 as primary bottleneck
-    \item \textbf{Multiple pathways}: ProteinMPNN redesigns achieve the same endpoint via only 19\% circuit overlap with natural toxins---ESM-2 has multiple routes to the toxin representation, making targeted disruption difficult
+    \item \textbf{Multiple pathways}: ProteinMPNN redesigns achieve the same endpoint via only 19\% circuit overlap with natural toxins, ESM-2 has multiple routes to the toxin representation, making targeted disruption difficult
 \end{enumerate}
 
 \subsection{The Security Boundary}
@@ -417,7 +417,7 @@ The use of a frozen linear probe is a deliberate design choice for robustness. A
 The four-tier attack taxonomy reveals the security boundary lies at gradient access:
 
 \begin{itemize}
-    \item \textbf{No gradient + structural constraint (ProteinMPNN)}: 6.1\% evasion. Practical threat model---produces functional proteins via synthesis orders.
+    \item \textbf{No gradient + structural constraint (ProteinMPNN)}: 6.1\% evasion. Practical threat model, produces functional proteins via synthesis orders.
     \item \textbf{Gradient + no structural constraint (HotFlip)}: 100\% evasion. Requires white-box probe access; unconstrained substitutions may compromise protein function (to be confirmed by structural prediction).
     \item \textbf{Embedding-space attacks (PGD, pSSR/UAP)}: 100\% evasion. Require white-box access to ESM-2 internals; no sequence-space realisation without embedding inversion.
 \end{itemize}
@@ -432,11 +432,11 @@ the privacy of its weights.}
 
 \begin{enumerate}
     \item \textbf{Sequence-based screening is insufficient}: All 723 redesigns evade BLAST.
-    \item \textbf{ESM-2 probes are robust by architecture}: Transfer ratio 1.28 means the adversary is working against themselves---ProteinMPNN preserves what the probe detects.
+    \item \textbf{ESM-2 probes are robust by architecture}: Transfer ratio 1.28 means the adversary is working against themselves, ProteinMPNN preserves what the probe detects.
     \item \textbf{No retraining needed}: 93.9\% detection with zero exposure to redesigned sequences; cross-family holdout AUROC 0.9929 confirms generalisation to unseen toxin families.
-    \item \textbf{Zero-shot discovery}: The probe finds biosecurity threats not in any training set, including a WHO Priority 1 pathogen cluster and cross-kingdom fungal effectors---functioning as an open-ended discovery tool, not just a known-threat detector.
+    \item \textbf{Zero-shot discovery}: The probe finds biosecurity threats not in any training set, including a WHO Priority 1 pathogen cluster and cross-kingdom fungal effectors, functioning as an open-ended discovery tool, not just a known-threat detector.
     \item \textbf{Deployment recommendation}: Deploy ESM-2 probes with private weights. The security margin at $\epsilon = 0.5$ in embedding space is not practically reachable by synthesis-order adversaries without model internals.
-    \item \textbf{Interpretability enables targeted hardening}: The evadable features (transfer ratio ${<}0.13$) represent known blind spots. A screening system could flag anomalous patterns where robust features fire but evadable features do not---consistent with targeted evasion.
+    \item \textbf{Interpretability enables targeted hardening}: The evadable features (transfer ratio ${<}0.13$) represent known blind spots. A screening system could flag anomalous patterns where robust features fire but evadable features do not, consistent with targeted evasion.
 \end{enumerate}
 
 \subsection{Limitations}
@@ -456,11 +456,11 @@ the privacy of its weights.}
 \begin{enumerate}
     \item \textbf{HotFlip transferability}: Do gradient-guided sequence attacks transfer across probe architectures and pLMs, analogous to GCG transferability across LLMs \cite{zou2023universal}? If so, probe diversity alone does not provide security.
     
-    \item \textbf{Protein alignment}: ProteinMPNN has no alignment objective---it will design dangerous proteins given the right backbone. Fine-tuning protein design models using circuit-level interventions at the layer-32 bottleneck (the protein-space analogue of RLHF) could make design models intrinsically safer rather than relying on output filters.
+    \item \textbf{Protein alignment}: ProteinMPNN has no alignment objective, it will design dangerous proteins given the right backbone. Fine-tuning protein design models using circuit-level interventions at the layer-32 bottleneck (the protein-space analogue of RLHF) could make design models intrinsically safer rather than relying on output filters.
     
     \item \textbf{Wet-lab validation}: AlphaFold structural prediction of the two uncharacterised \textit{A. baumannii} candidates (UniRef50\_A0A009RXF9, UniRef50\_A0A009QBX0) followed by cytotoxicity assays would transform a computational prediction into a biosecurity discovery. Collaboration with IBBIS/CBH is the natural path.
     
-    \item \textbf{Attack taxonomy across pLMs}: A systematic benchmark of (pLM $\times$ probe architecture $\times$ attack type) would establish principled deployment recommendations---the protein-space analogue of AdvBench.
+    \item \textbf{Attack taxonomy across pLMs}: A systematic benchmark of (pLM $\times$ probe architecture $\times$ attack type) would establish principled deployment recommendations, the protein-space analogue of AdvBench.
 \end{enumerate}
 
 % ============================================================
@@ -469,15 +469,15 @@ the privacy of its weights.}
 
 \begin{itemize}
     \item \textbf{BLAST: 0\%. ESM-2: 93.9\%.} ProteinMPNN fails to evade structure-aware probes.
-    \item \textbf{Transfer ratio 1.28}: Redesigns amplify toxin features---ProteinMPNN preserves what the probe detects.
+    \item \textbf{Transfer ratio 1.28}: Redesigns amplify toxin features, ProteinMPNN preserves what the probe detects.
     \item \textbf{r = 0.992}: Redesigns use the same DPA circuit as natural toxins; 19\% circuit overlap means multiple routes to the same toxic endpoint.
     \item \textbf{Security boundary at gradient access}: 6.1\% evasion (blackbox) vs 100\% (white-box gradient). The probe's guarantee equals the privacy of its weights.
     \item \textbf{UAP geometry}: Stable attack direction (cos $= -0.805$, invariant to $\epsilon$) reveals manifold structure, not probe weakness.
-    \item \textbf{Zero-shot discovery}: Hemolysin, Leukotoxin, Cyclolysin, fungal effector Ecp2, and two uncharacterised \textit{A. baumannii} proteins---none in training data.
+    \item \textbf{Zero-shot discovery}: Hemolysin, Leukotoxin, Cyclolysin, fungal effector Ecp2, and two uncharacterised \textit{A. baumannii} proteins, none in training data.
     \item \textbf{Mutation robustness}: 0/1,179 single-point mutations evade; the circuit reads polarity, not sequence identity.
 \end{itemize}
 
-\textbf{The key insight}: ProteinMPNN cannot redesign away what is structurally necessary for toxin function---and ESM-2 reads structure.
+\textbf{The key insight}: ProteinMPNN cannot redesign away what is structurally necessary for toxin function, and ESM-2 reads structure.
 
 
 \appendix
