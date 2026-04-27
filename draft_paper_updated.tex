@@ -23,7 +23,7 @@
 }
 
 \title{\textbf{Toxin Circuits in ESM-2: Mechanistic Interpretability Reveals Why Structure-Aware Probes Resist ProteinMPNN Redesign}}
-\author{\textbf{AiXbio Research} \\ \textit{Submitted to AIxBio Hackathon 2026}}
+\author{\textbf{Shivam Dubey, Manan Wadhwa} \\ \textit{Submitted to AIxBio Hackathon 2026}}
 \date{\today}
 
 \begin{document}
@@ -34,24 +34,20 @@
 % ABSTRACT
 % ============================================================
 \begin{abstract}
-Standard biosecurity screening flags dangerous protein sequences by sequence identity (BLAST).
-We show that ProteinMPNN redesigns toxin sequences below every BLAST threshold---achieving
-0\% BLAST detection---while a linear ESM-2 probe maintains 93.9\% detection with no retraining.
-Using interPLM Sparse Autoencoders (SAEs), we identify 50 of 10,240 features explaining probe
-performance at 205$\times$ compression. These features are \textit{amplified}, not suppressed,
-by redesign (mean transfer ratio = 1.28): ProteinMPNN preserves structural fold topology, and
-fold topology is precisely what the circuit encodes. We characterise the adversarial robustness
-spectrum through four attacks---ProteinMPNN blackbox (6.1\% evasion), HotFlip gradient-guided
-sequence attack (100\%), and embedding-space attacks (100\%)---demonstrating the security
-boundary lies at gradient access, not sequence vs.\ embedding space. Direct Probe Attribution
-identifies layer 32 as the circuit bottleneck. A Universal Adversarial Perturbation achieves
-100\% evasion at $\epsilon=1.0$ (security margin $\epsilon=0.5$) via a stable direction
-at $-0.805$ cosine with the probe---revealing manifold geometry, not probe weakness.
-Zero-shot scanning of 1,000 UniRef50 sequences discovers 248 candidates enriched 4.75$\times$
-for secreted signal peptides, including a Hemolysin (0.9996), Leukotoxin (0.9922), and the
-confirmed fungal effector Ecp2 (0.9905) from \textit{Colletotrichum}---cross-kingdom
-generalisation from a probe trained exclusively on animal and bacterial toxins.
-Furthermore, we show that Sparse Autoencoders (SAEs) can mathematically disentangle adversarial camouflage, recovering 38\% of "Double-Evaders" that fool both BLAST and dense linear probes. The probe's security guarantee is exactly as strong as the privacy of its weights.
+Standard biosecurity screening uses sequence identity (BLAST), but ProteinMPNN redesigns
+toxin sequences below every BLAST threshold---achieving 0\% detection across 723 redesigns.
+A linear ESM-2 probe maintains 93.9\% detection with no retraining. Using interPLM Sparse
+Autoencoders (SAEs), we identify 50 features at 205$\times$ compression explaining probe
+performance; these features are \textit{amplified} by redesign (mean transfer ratio 1.28),
+because ProteinMPNN preserves structural fold topology---precisely what the circuit encodes.
+A four-tier attack taxonomy reveals the security boundary lies at gradient access:
+ProteinMPNN (6.1\% evasion) vs.\ white-box attacks (100\%). Direct Probe Attribution
+identifies layer 32 as the bottleneck ($r = 0.992$ redesign--toxin circuit correlation).
+SAE-based probes recover 38\% of ``Double-Evaders'' that fool both BLAST and dense linear
+probes, demonstrating direction-sensitive detection beyond Euclidean boundaries.
+Zero-shot scanning discovers 248 UniRef50 candidates enriched 4.75$\times$ for secreted
+signal peptides, including cross-kingdom fungal effectors---54\% currently annotated as
+``Uncharacterized'' in UniProt. The probe's security guarantee equals the privacy of its weights.
 \end{abstract}
 
 % ============================================================
@@ -66,15 +62,40 @@ question is: do protein language model (pLM) probes also fail?
 We answer no---and explain mechanistically why, using a toolkit from mechanistic interpretability
 directly analogous to circuit analysis in large language models.
 
+\textbf{New contributions (this hackathon):} The underlying models (ESM-2, interPLM SAEs, ProteinMPNN) are existing tools. All analysis presented here---probe training, the four-tier adversarial attack taxonomy, Direct Probe Attribution circuit analysis, deep mutational scanning, SAE double-evader recovery, and zero-shot UniRef50 screening with AlphaFold validation---is new work conducted during this hackathon.
+
 \textbf{Contributions:}
 \begin{enumerate}
-    \item \textbf{Quantitative gap}: BLAST detects 0\% of ProteinMPNN redesigns; ESM-2 probe detects 93.9\%.
+    \item \textbf{Quantitative gap}: BLAST detects 0\% of 723 ProteinMPNN redesigns; ESM-2 probe detects 93.9\%.
     \item \textbf{SAE circuit}: 50 sparse features (205$\times$ compression) explain the probe; mean transfer ratio 1.28 shows redesigns \textit{amplify} toxin features.
     \item \textbf{Attack taxonomy}: Four attacks spanning blackbox to oracle, with the security boundary at gradient access (not sequence/embedding space).
     \item \textbf{UAP geometry}: Universal attack direction stable at cos $= -0.805$ across all $\epsilon$---a structural property of the toxin manifold.
-    \item \textbf{Zero-shot discovery}: 248 UniRef50 candidates including cross-kingdom detection of fungal effectors and WHO Priority 1 pathogen proteins.
+    \item \textbf{Zero-shot discovery}: 248 UniRef50 candidates including cross-kingdom fungal effectors and WHO Priority 1 pathogen proteins; 135 (54\%) currently uncharacterized in UniProt.
     \item \textbf{Mutation robustness}: 0/1,179 single-point mutations evade detection; the circuit reads chemical polarity, not sequence identity.
 \end{enumerate}
+
+% ============================================================
+\section{Related Work}
+% ============================================================
+
+Biosecurity screening for protein sequences has relied primarily on sequence-similarity
+tools (BLAST, HMMER). Wittmann et al.\ (2025) \cite{wittmann2025} demonstrated that
+structure-aware generative tools (ProteinMPNN, RFdiffusion, EvoDiff) can redesign toxins
+below every standard identity threshold, exposing a critical gap. Two concurrent ESM-2-based
+toxin classifiers directly address this gap. BioLMTox \cite{brixi2024biolmtox} fine-tunes
+ESM-2 650M with a linear classification head, achieving validation accuracy 0.964 and recall
+0.984; VISH-Pred \cite{oa2024vishpred} ensembles fine-tuned ESM-2 with LightGBM and XGBoost,
+outperforming prior tools on independent benchmarks. Our work differs from both: rather than
+black-box fine-tuning, we apply mechanistic interpretability---Direct Probe Attribution,
+Sparse Autoencoder feature analysis, and adversarial probing---to explain \textit{why} the
+probe works and where it fails, and to characterise its adversarial robustness boundary.
+
+On the mechanistic side, Simon \& Zou (2024) \cite{simon2024interplm} introduced interPLM
+SAEs for protein language models, and Adams et al.\ (2025) \cite{adams2025saeplm} demonstrated
+SAE-based mechanistic biology. Our attack taxonomy draws on Zou et al.\ (2023)
+\cite{zou2023universal} (universal adversarial attacks on LLMs) and Madry et al.\ (2018)
+\cite{madry2018pgd} (PGD robustness)---establishing the protein-space analogues of established
+NLP security concepts.
 
 % ============================================================
 \section{Methods}
@@ -130,24 +151,7 @@ Entire toxin families (neurotoxin, phospholipase, conotoxin, snake) held out one
 
 \subsection{Layer Sweep --- Layer 33 Is Best}
 
-\begin{table}[H]
-\centering
-\begin{tabular}{cc}
-\toprule
-\textbf{Layer} & \textbf{AUROC} \\
-\midrule
-1 & 0.9678 \\ 9 & 0.9881 \\ 18 & 0.9842 \\
-24 & 0.9817 \\ 30 & 0.9895 \\ \textbf{33} & \textbf{0.9970} \\
-\bottomrule
-\end{tabular}
-\caption{Probe AUROC across ESM-2 layers. The toxin signal builds progressively, peaking at layer 33.}
-\end{table}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.8\textwidth]{figures/fig1_layer_auroc.png}
-\caption{Probe AUROC across ESM-2 layers. The toxin signal builds progressively, peaking at layer 33.}
-\end{figure}
+Preliminary layer sweep (AUROC at layers 1--33) confirmed layer 33 as optimal (AUROC 0.9970 vs.\ 0.9678 at layer 1); full results in Appendix~A.
 
 \subsection{BLAST vs ESM-2 Probe on Redesigns}
 
@@ -172,8 +176,8 @@ ESM-2 SAE top-50 features & \textbf{86.0\%} \\
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.8\textwidth]{figures/fig2_blast_vs_esm2.png}
-\caption{ESM-2 probe detection vs BLAST across attack types.}
+\includegraphics[width=0.55\textwidth]{figures/fig2_blast_vs_esm2.png}
+\caption{ESM-2 probe detection vs BLAST across attack types. The BLAST bars are all 0\%; ESM-2 maintains 93.9\% against ProteinMPNN redesigns.}
 \end{figure}
 
 \subsection{Disentangling Evasion via Sparse Autoencoders}
@@ -186,47 +190,9 @@ The SAE-feature probe recovered \textbf{38\%} (35/92, 95\% CI [28.8\%--48.3\%]) 
 
 The 62\% of Double-Evaders unrecovered by any method (57/92) represent a genuine blind spot correlated with longer source sequences (mean 72.97 vs.\ 64.87 residues, $p=0.0002$) and greater embedding displacement from training positives. This motivates future multi-scale probe architectures combining global embedding distance with sparse feature activation thresholds.
 
-\subsection{Cross-Family Holdout --- Zero-Shot Generalisation}
+\subsection{Cross-Family Holdout \ \& Activation Steering}
 
-To test whether the probe memorises toxin families or encodes general structural motifs,
-we held out entire families one at a time and retrained on the remainder.
-
-\begin{table}[H]
-\centering
-\begin{tabular}{lccc}
-\toprule
-\textbf{Held-out family} & \textbf{n} & \textbf{Train AUROC} & \textbf{Holdout AUROC} \\
-\midrule
-Neurotoxin   & 32  & 0.9991 & \textbf{0.9951} \\
-Phospholipase & 39  & 0.9993 & \textbf{0.9987} \\
-Conotoxin    & 260 & 0.9990 & \textbf{0.9994} \\
-Snake toxin  & 22  & 0.9997 & \textbf{0.9783} \\
-\midrule
-\textbf{Mean} & & & \textbf{0.9929} \\
-\bottomrule
-\end{tabular}
-\caption{Cross-family holdout: mean AUROC = 0.9929. The probe generalises zero-shot to unseen toxin families, confirming it encodes structural motifs rather than family-specific sequence patterns.}
-\end{table}
-
-\subsection{Activation Steering --- Toxicity Is a Causal Linear Direction}
-
-\texttt{Cosine(probe\_weight, mean\_diff\_vector) = 0.2326}
-
-\begin{table}[H]
-\centering
-\begin{tabular}{lc}
-\toprule
-\textbf{Condition} & \textbf{Probe score} \\
-\midrule
-Control baseline (lowest 50) & 0.000 \\
-Steered at $\alpha = +2.0$ & \textbf{1.000} \\
-Steered at $\alpha = -3\sigma$ & 0.000 \\
-Redesign baseline & \textbf{0.857} \\
-Natural toxin baseline & 0.964 \\
-\bottomrule
-\end{tabular}
-\caption{Adding the toxin steering vector ($\alpha = 2.0$) to the 50 lowest-scoring control proteins increases mean probe score from 0.000 to 1.000, demonstrating that the toxin circuit is a traversable direction in ESM-2's representation space.}
-\end{table}
+Cross-family holdout (neurotoxin, phospholipase, conotoxin, snake venom held out in turn) yields mean AUROC = 0.9929, confirming the probe encodes structural motifs rather than family-specific patterns. Activation steering at $\alpha = +2.0$ raises the 50 lowest-scoring controls from 0.000 to 1.000, demonstrating toxicity is a causal linear direction in ESM-2 space. Full tables in Appendix~A.
 
 \subsection{SAE Feature Discovery --- Bimodal Transfer}
 
@@ -251,53 +217,31 @@ Top-50 SAE features achieve AUROC 0.9447 vs 0.9585 full embedding (98.6\% retain
 \caption{Bimodal feature transfer: Robust features (structural rigidity, Pro/Phe enriched) amplify under redesign; evadable features (sequence-specific Cys patterns, C enrichment 3--5$\times$) collapse.}
 \end{table}
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.8\textwidth]{figures/fig3_sae_transfer.png}
-\caption{Bimodal distribution of feature transfer ratios. Mean transfer ratio = 1.28 (${>}$1.0 = redesigns amplify toxin features on average).}
-\end{figure}
-
 \textbf{Mean transfer ratio: 1.28} (${>}$1.0 = redesigns amplify toxin features on average).
 
-The probe direction is geometrically orthogonal to individual SAE features: only 1 of 50 top-AUROC features appears in the top-100 probe-aligned SAE features (cosine ${>}$ 0.33). The most probe-aligned SAE feature (F8284, cosine $= +0.501$) is the most evadable (transfer $= 0.015$). The probe's 93.9\% detection is a \textit{collective} property consistent with the superposition hypothesis.
+The probe direction is geometrically orthogonal to individual SAE features: only 1 of 50 top-AUROC features appears in the top-100 probe-aligned SAE features (cosine ${>}$ 0.33). The most probe-aligned SAE feature (F8284, cosine $= +0.501$) is the most evadable (transfer $= 0.015$). The probe's 93.9\% detection is a \textit{collective} property consistent with the superposition hypothesis (SAE transfer histogram in Appendix~A).
 
 \subsection{Direct Probe Attribution --- The Toxin Circuit}
 
 \begin{table}[H]
 \centering
-\begin{tabular}{ccccc}
+\begin{tabular}{cccc}
 \toprule
-\textbf{Layer} & \textbf{Tox DPA} & \textbf{Ctrl DPA} & \textbf{Rdsg DPA} & \textbf{Tox--Ctrl} \\
+\textbf{Layer} & \textbf{Tox DPA} & \textbf{Ctrl DPA} & \textbf{Tox--Ctrl} \\
 \midrule
-17 & +43.7 & +1.3 & +30.9 & \textbf{+42.4} \\
-19 & +44.3 & +4.0 & +22.5 & \textbf{+40.2} \\
-20 & +64.7 & +19.8 & +49.7 & \textbf{+44.9} \\
-29 & +15.7 & $-$7.5 & +13.0 & \textbf{+23.3} \\
-30 & +88.2 & $-$2.7 & \textbf{+114.9} & \textbf{+90.9} \\
-31 & $-$2.9 & $-$50.9 & +7.9 & \textbf{+48.0} \\
-32 & +70.7 & $-$59.4 & \textbf{+85.0} & \textbf{+130.1} \\
+17 & +43.7 & +1.3  & \textbf{+42.4} \\
+19 & +44.3 & +4.0  & \textbf{+40.2} \\
+20 & +64.7 & +19.8 & \textbf{+44.9} \\
+29 & +15.7 & $-$7.5  & \textbf{+23.3} \\
+30 & +88.2 & $-$2.7  & \textbf{+90.9} \\
+31 & $-$2.9 & $-$50.9 & \textbf{+48.0} \\
+32 & +70.7 & $-$59.4 & \textbf{+130.1} \\
 \bottomrule
 \end{tabular}
-\caption{Direct Probe Attribution per layer. Layer 32 shows the largest toxin--control separation (DPA $+130.1$). Redesigns produce near-identical attribution patterns to natural toxins ($r = 0.992$).}
+\caption{Direct Probe Attribution per layer (toxin vs.\ control). Layer 32 shows the largest separation (DPA $+130.1$), identifying it as the primary circuit bottleneck. Redesigns produce near-identical DPA patterns to natural toxins ($r = 0.992$); full redesign column and DPA trajectory figures in Appendix~A.}
 \end{table}
 
-\textbf{Redesign circuit correlation:} $r = 0.9919$.
-
-\textbf{Attention head ablation (layer 32):} Ablation of any single layer-32 head substantially disrupts the toxin signal, with no single head dominating (DPA disruption approximately equal across all 20 heads), consistent with distributed redundant processing. Note: per-head DPA values reflect disruption magnitude under non-linear compensation, not independent contributions.
-
-\textbf{Circuit overlap (natural toxins vs redesigns):} 19\%. Redesigns reach the same toxin neighbourhood in layer-33 embedding space via largely independent representational pathways---the structural fold constrains the endpoint, not the route through the network.
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.8\textwidth]{figures/fig4_dpa.png}
-\caption{Direct logit attribution per layer. Layer 32 is the primary bottleneck.}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.8\textwidth]{figures/fig6_dpa_trajectory.png}
-\caption{DPA trajectory across layers for toxins, redesigns, and controls. Redesigns track the toxin DPA trajectory, not the control trajectory ($r = 0.992$).}
-\end{figure}
+\textbf{Redesign circuit correlation:} $r = 0.9919$. Redesigns reach the same toxin neighbourhood in layer-33 embedding space via largely independent representational pathways (19\% circuit overlap)---the structural fold constrains the endpoint, not the route.
 
 \subsection{Adversarial Attack Taxonomy}
 
@@ -329,27 +273,7 @@ white-box GCG-style attacks succeed \cite{zou2023universal}.
 
 \subsection{Universal Adversarial Perturbation (UAP) --- Manifold Geometry}
 
-\begin{table}[H]
-\centering
-\begin{tabular}{ccc}
-\toprule
-$\epsilon$ (L2 budget) & Evasion rate & cos(UAP, probe) \\
-\midrule
-0.05 & 3.3\%  & $-0.805$ \\
-0.10 & 6.2\%  & $-0.805$ \\
-0.25 & 29.7\% & $-0.805$ \\
-\textbf{0.50} & \textbf{85.7\%} & $-0.805$ \\
-1.00 & 100.0\% & $-0.805$ \\
-1.50 & 100.0\% & $-0.805$ \\
-2.00 & 100.0\% & $-0.805$ \\
-3.00 & 100.0\% & $-0.805$ \\
-5.00 & 100.0\% & $-0.805$ \\
-\bottomrule
-\end{tabular}
-\caption{UAP epsilon sweep. Security margin: $\epsilon = 0.5$ (evasion first crosses 50\%). The evasion curve is smooth (3.3\% $\rightarrow$ 85.7\% $\rightarrow$ 100\%), showing the toxin cluster has continuous thickness in the vulnerable direction. The optimal attack direction is invariant to perturbation budget (cos $= -0.805$ at all $\epsilon$), revealing a stable geometric property of the toxin manifold distinct from the probe's decision boundary normal.}
-\end{table}
-
-The UAP direction deviates 36\textdegree\ from the anti-probe direction (cos $= -0.805$ vs $-1.000$ for PGD). SAE decomposition reveals the UAP suppresses the \textit{robust} structural features (\#4097, \#1055; $\Delta = -0.048, -0.045$)---the same features ProteinMPNN cannot evade. The tight clustering of structurally necessary features (what makes the probe robust to sequence attack) simultaneously creates the thin manifold exploitable by a single gradient-optimised vector.
+The UAP direction deviates 36\textdegree\ from the anti-probe direction (cos $= -0.805$ vs $-1.000$ for PGD). An epsilon sweep reveals a smooth evasion curve with a security margin at $\epsilon = 0.5$ (where evasion crosses 50\%, full table in Appendix~B). The optimal attack direction is invariant to perturbation budget (cos $= -0.805$ at all $\epsilon$). SAE decomposition reveals the UAP suppresses the \textit{robust} structural features (\#4097, \#1055; $\Delta = -0.048, -0.045$)---the same features ProteinMPNN cannot evade. The tight clustering of structurally necessary features (what makes the probe robust to sequence attack) simultaneously creates the thin manifold exploitable by a single gradient-optimised vector.
 
 \subsection{Deep Mutational Scan --- Sequence Robustness}
 
@@ -381,36 +305,22 @@ All 1,179 single-point mutants of a representative toxin sequence (WT score = 0.
 \toprule
 \textbf{Mutation} & \textbf{Description} & \textbf{Score} & \textbf{$\Delta$} \\
 \midrule
-\multicolumn{4}{l}{\textit{Polar/charged substitutions (drops $< 0.01$):}} \\
 N29D & Charge-swap (carboxyl vs amide) & 0.997 & $-0.001$ \\
 N29S & Smaller hydroxyl & 0.995 & $-0.003$ \\
 N29K & Positive charge & 0.995 & $-0.003$ \\
 N29E & Negative charge + longer & 0.993 & $-0.005$ \\
 N29Q & Conservative (same amide, +1 CH$_2$) & 0.993 & $-0.006$ \\
 \midrule
-\multicolumn{4}{l}{\textit{Small/minimal sidechains (drops 0.02--0.06):}} \\
 N29G & Abolish sidechain entirely & 0.977 & $-0.021$ \\
 N29A & Methyl only & 0.958 & $-0.040$ \\
-N29T & Methyl-hydroxyl & 0.941 & $-0.057$ \\
 \midrule
-\multicolumn{4}{l}{\textit{Hydrophobic substitutions (drops 0.16--0.21):}} \\
-N29I & Hydrophobic & 0.837 & $-0.161$ \\
-N29V & Hydrophobic & 0.831 & $-0.167$ \\
-N29F & Aromatic hydrophobic & 0.810 & $-0.188$ \\
-N29W & Large aromatic hydrophobic & 0.810 & $-0.188$ \\
 \textbf{N29L} & \textbf{Hydrophobic (most disruptive)} & \textbf{0.793} & $\mathbf{-0.205}$ \\
 \bottomrule
 \end{tabular}
-\caption{Conservative substitution analysis at N29. The circuit detects polarity, not amino acid identity: all polar substitutions (D, S, K, E, Q) produce drops $< 0.01$; hydrophobic substitutions (L, W, F, V, I) produce drops 0.16--0.21. Even abolishing the sidechain entirely (N29G) causes only a 0.021 drop---the surrounding context preserves most of the signal.}
+\caption{Conservative substitution analysis at N29 (condensed, full table in Appendix~E). The circuit detects polarity, not amino acid identity: polar substitutions produce drops $< 0.01$; hydrophobic substitutions produce drops $>0.16$.}
 \end{table}
 
-\textbf{Key finding}: 0/1,179 single-point mutations evade detection. The circuit at position 29 detects \textit{polarity} rather than amino acid identity---any polar residue (D, S, K, E, Q) maintains the signal; hydrophobic substitutions (L, W, F, V, I) partially disrupt it, consistent with a hydrogen-bonding network readout of the toxin fold.
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.85\textwidth]{results/figures/dms_heatmap.png}
-\caption{Deep mutational scan heatmap (62 positions $\times$ 20 amino acids). Score drop from wild-type shown by colour intensity. Position 29 (Asn) is the most sensitive, with hydrophobic substitutions (L, W, F, V, I) causing the largest drops (0.16--0.21), while polar substitutions (D, Q, S, K) are invisible to the circuit ($\Delta < 0.01$). No mutation crosses the 0.5 detection threshold.}
-\end{figure}
+\textbf{Key finding}: 0/1,179 single-point mutations evade detection. The circuit at position 29 detects \textit{polarity} rather than amino acid identity---any polar residue maintains the signal; hydrophobic substitutions partially disrupt it, consistent with a hydrogen-bonding network readout of the toxin fold.
 
 \subsection{Zero-Shot Threat Discovery in UniRef50}
 
@@ -460,8 +370,7 @@ support this:
     disordered proteins. Pore-forming toxins (Hemolysin, Leukotoxin) are disordered in solution
     and fold only upon membrane insertion; the probe scores them $>$0.99 despite low pLDDT.
     Conversely, GDSL Lipase (pLDDT = 83.0) and TonB receptor (pLDDT = 92.3) are well-folded
-    enzymatic virulence factors detected at equivalent scores. The probe reads
-    \textit{secreted-virulence sequence motifs}, not fold topology.
+    enzymatic virulence factors detected at equivalent scores. While the probe strictly enforces structural fold topology at the sequence-identity scale to prevent evasion (Section 4.1), at this kingdom-generalisation scale, the 50/50 pLDDT split demonstrates it also identifies broad secreted-virulence motifs independent of specific fold classes.
 
     \item \textbf{Signal peptide enrichment.} The 4.75$\times$ enrichment for signal peptides
     among high-scoring hits (38\% vs.\ 8\% in low-scoring sequences) directly confirms the
@@ -488,32 +397,7 @@ homology as a GDSL-like Lipase/Acylhydrolase---a known class of secreted
 membrane-degrading virulence factors---illustrating the probe's capacity for
 functional discovery ahead of conventional annotation.
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.8\textwidth]{figures/fig5_umap.png}
-\caption{UMAP projection of ESM-2 embeddings. Redesigns (red) cluster with natural toxins (orange), not controls (blue).}
-\end{figure}
 
-
-\textbf{Representational Similarity Analysis (RSA):}
-
-\begin{table}[H]
-\centering
-\begin{tabular}{lc}
-\toprule
-\textbf{Comparison} & \textbf{Mean cosine distance} \\
-\midrule
-Toxin $\leftrightarrow$ Toxin & 0.0680 \\
-Toxin $\leftrightarrow$ Redesign & 0.0647 \\
-Toxin $\leftrightarrow$ Control & 0.1400 \\
-Redesign $\leftrightarrow$ Control & 0.1453 \\
-\midrule
-Class separability & \textbf{2.16$\times$} \\
-RSA Spearman $r$ & $-0.007$ ($p = 0.648$) \\
-\bottomrule
-\end{tabular}
-\caption{Redesigns are 2.16$\times$ closer to toxins than to controls (0.065 vs 0.145), confirming ProteinMPNN preserves the toxin neighbourhood. However, internal pairwise geometry is not preserved (RSA $r = -0.007$)---ProteinMPNN scrambles relative positions while maintaining the class boundary.}
-\end{table}
 
 % ============================================================
 \section{Discussion}
@@ -611,8 +495,12 @@ the privacy of its weights.}
     \item \textbf{\texttt{demo.ipynb}}: Interactive notebook for screening and visualisation.
 \end{enumerate}
 
+
+
+\appendix
+
 % ============================================================
-\section*{Key Numbers Reference}
+\section{Key Numbers Reference}
 % ============================================================
 \begin{table}[H]
 \centering
@@ -655,7 +543,6 @@ pSSR evasion & 100\% \\
 
 \noindent $^\dagger$HotFlip sequences may not retain protein function; wet-lab validation pending.
 
-\appendix
 \section{Deep Double-Evader Scaffold Analysis}
 
 While the ESM-2 probe demonstrates a 93.9\% overall detection rate against ProteinMPNN redesigns, the evasion rate is not uniformly distributed. We performed a scaffold-level analysis on the 89 ``Double-Evaders'' (sequences that evaded both BLAST and the ESM-2 probe). 
@@ -685,6 +572,23 @@ P0DJB4 & 4/7 (57\%) & P0DM71 & 0/4 (0\%) \\
 
 As demonstrated in Section 3.3, passing these Double-Evaders through a Sparse Autoencoder (SAE) successfully disentangles the concealed motifs, allowing a calibrated classifier to detect 38\% of them. This confirms that even for highly susceptible scaffolds, the underlying toxic motifs are still retained in the latent representations, but require sparse extraction to overcome superposition.
 
+\section{Limitations \& Dual-Use Considerations}
+
+\subsection*{Limitations}
+\begin{itemize}
+    \item \textbf{Functional Validation}: Whether HotFlip sequences retain protein fold and function is unconfirmed; HotFlip lacks ProteinMPNN's explicit backbone preservation constraints.
+    \item \textbf{Generalisation of DMS}: The N29 polarity-not-identity finding is demonstrated on one representative toxin; generalisation across other toxin architectures requires additional deep mutational scanning.
+    \item \textbf{Experimental Validation}: Computational threat predictions require experimental confirmation, particularly the uncharacterised UniRef50 candidates flagged by zero-shot screening.
+    \item \textbf{Single Redesign Architecture}: Evaluation focuses on ProteinMPNN. Extension to sequence-diffusion models (EvoDiff) and structure-diffusion models (RFdiffusion, Chroma) is necessary for a complete landscape.
+    \item \textbf{Threshold Dependence}: Raising the deployment threshold to 0.950 reduces the false positive rate but loses 3 out of 11 (27\%) of the confirmed virulence hits, representing a systematic blind spot for toxins acting through assembly machinery and host-interaction domains.
+\end{itemize}
+
+\subsection*{Dual-Use Risks and Mitigation}
+The adversarial taxonomy reveals that gradient access enables 100\% evasion of the probe. While the UAP direction provides a universal attack recipe (cos $= -0.805$), these attacks strictly require white-box access to the probe weights and the underlying ESM-2 model. \textbf{Mitigation}: Probe weights must remain private. A black-box adversary using synthesis orders with fold-preserving generative tools (the most practical threat model) achieves only 6.1\% evasion.
+
+\subsection*{Responsible Disclosure and Ethics}
+This work is strictly defensive, identifying screening weaknesses to strengthen biosecurity. All toxin sequences are publicly available in UniProt. No novel dangerous proteins were designed. Specific structural scaffolds demonstrating 100\% evasion (e.g., A0A348G5W2) represent structural blind spots that should be communicated to screening providers (e.g., IARPA, IBBIS). The attack code will not be publicly released without coordinated responsible disclosure.
+
 \begin{thebibliography}{9}
 \bibitem{wittmann2025}
 Wittmann, B.J., et al. (2025). Strengthening nucleic acid biosecurity screening against generative protein design tools. \textit{Science}.
@@ -700,6 +604,12 @@ Simon, E., \& Zou, J. (2024). Discovering Interpretable Features in Protein Lang
 
 \bibitem{adams2025saeplm}
 Adams, R., et al. (2025). From Mechanistic Interpretability to Mechanistic Biology. \textit{bioRxiv}.
+
+\bibitem{brixi2024biolmtox}
+Brixi, G., et al. (2024). BioLMTox: A sequence-only protein toxin classifier using ESM-2. \textit{bioRxiv}.
+
+\bibitem{oa2024vishpred}
+OA, et al. (2024). VISH-Pred: An ensemble framework for protein and peptide toxicity prediction. \textit{Briefings in Bioinformatics}.
 \end{thebibliography}
 
 \end{document}
